@@ -1,0 +1,15 @@
+{
+  "rn-errors-before": 1,
+  "rn-errors-after": 0,
+  "rn-errors-api-after": 0,
+  "rn-transaction-before": 2,
+  "rn-transaction-after": 0,
+  "rn-transaction-api-after": 0,
+  "flutter-proxy-before": 1,
+  "flutter-baseline-analyze": 1,
+  "flutter-proxy-after": 0,
+  "flutter-proxy-analyze-after": 1,
+  "flutter-attributes-before": 1,
+  "flutter-attributes-after": 0,
+  "flutter-attributes-analyze-after": 1
+}

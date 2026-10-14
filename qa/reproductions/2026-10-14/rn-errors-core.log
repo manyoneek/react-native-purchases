@@ -1,0 +1,41 @@
+
+> react-native-purchases@10.13.0 test
+> jest --runInBand
+
+PASS __tests__/index.test.js
+PASS __tests__/alertHelper.test.ts
+PASS __tests__/purchaseSimulatedPackageHelper.test.ts
+PASS __tests__/offeringsLoader.test.ts
+PASS __tests__/releaseVersionPatterns.test.ts
+PASS __tests__/errorNormalization.test.ts
+PASS __tests__/environment.test.ts
+PASS __tests__/normalizingRejections.test.ts
+PASS __tests__/ApiKeyValidation/ExpoGo.test.js
+PASS __tests__/ApiKeyValidation/RorkSandbox.test.js
+PASS __tests__/nativeModuleNull.test.js
+  ● Console
+
+    console.warn
+      [RevenueCat] isConfigured() returning false: Native module not available
+
+      2056 |             // Native module not available, so SDK cannot be configured
+      2057 |             // tslint:disable-next-line:no-console
+    > 2058 |             console.warn("[RevenueCat] isConfigured() returning false: Native module not available");
+           |                     ^
+      2059 |             return Promise.resolve(false);
+      2060 |         }
+      2061 |         return RNPurchases.isConfigured();
+
+      at Purchases.warn [as isConfigured] (dist/purchases.js:2058:21)
+      at Object.isConfigured (__tests__/nativeModuleNull.test.js:23:36)
+      at asyncGeneratorStep (../../../../../../../repos/revenuecat/react-native-purchases/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _next (../../../../../../../repos/revenuecat/react-native-purchases/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+      at ../../../../../../../repos/revenuecat/react-native-purchases/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:7
+      at Object.<anonymous> (../../../../../../../repos/revenuecat/react-native-purchases/node_modules/@babel/runtime/helpers/asyncToGenerator.js:14:12)
+
+
+Test Suites: 11 passed, 11 total
+Tests:       268 passed, 268 total
+Snapshots:   0 total
+Time:        3.436 s
+Ran all test suites.

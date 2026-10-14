@@ -1,0 +1,6 @@
+
+> react-native-purchases-ui@10.13.0 apitest
+> echo "Running react-native-purchases-ui API type checks" && tsc --project apitesters/tsconfig.json
+
+Running react-native-purchases-ui API type checks
+apitesters/localBoundaryNullability.tsx(7,3): error TS2578: Unused '@ts-expect-error' directive.

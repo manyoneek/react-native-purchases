@@ -1,0 +1,574 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace ios/RCBugReporter.xcworkspace -scheme QAReproduction -configuration Debug -destination "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9" -derivedDataPath ../native-derived -resultBundlePath ../evidence/native-fixed-recorded.xcresult -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test-without-building
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/reproductions/2026-10-14/evidence/native-fixed-recorded.xcresult
+
+2026-10-14 07:40:24.577 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:40:27.090849-0300 RCBugReporterUITests-Runner[55989:1056511] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'All tests' started at 2026-10-14 07:40:31.556.
+Test Suite 'RCBugReporterUITests.xctest' started at 2026-10-14 07:40:31.557.
+Test Suite 'ReproductionTests' started at 2026-10-14 07:40:31.557.
+Test Case '-[RCBugReporterUITests.ReproductionTests testErrorCallback]' started.
+    t =     0.00s Start Test at 2026-10-14 07:40:31.561
+    t =     0.06s Set Up
+    t =     0.06s Open org.reactjs.native.example.RCBugReporter
+    t =     0.06s     Launch org.reactjs.native.example.RCBugReporter
+2026-10-14 07:40:31.923 xcodebuild[55918:1055696] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-14 07:40:31.923 xcodebuild[55918:1055696] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-14 07:40:31.989 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+objc[55989]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.94232.0.L0dplT/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.1.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x108070310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.94232.0.L0dplT/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.1.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x10827c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     1.18s         Setting up automation session
+    t =     3.96s         Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     5.43s Waiting 30.0s for "1. Error callback types" Button to exist
+<unknown>:0: warning: -[RCBugReporterUITests.ReproductionTests testErrorCallback] : [Internal] Thread running at User-interactive quality-of-service class waiting on a thread without a QoS class specified (base priority 33). Investigate ways to avoid priority inversions
+    t =     6.49s     Checking `Expect predicate `existsNoRetry == 1` for object "1. Error callback types" Button`
+    t =     6.50s         Checking existence of `"1. Error callback types" Button`
+    t =     6.56s Tap "1. Error callback types" Button
+    t =     6.56s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     6.57s     Find the "1. Error callback types" Button
+    t =     6.58s     Check for interrupting elements affecting "1. Error callback types" Button
+    t =     6.61s         Wait for com.apple.springboard to idle
+    t =     6.73s     Synthesize event
+    t =     7.04s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     7.05s Waiting 45.0s for Button (First Match) to exist
+    t =     8.09s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =     8.09s         Checking existence of `Button (First Match)`
+    t =     8.83s         Capturing element debug description
+    t =     9.14s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =     9.14s         Checking existence of `Button (First Match)`
+    t =     9.15s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =     9.23s Added attachment named 'error-paywall'
+    t =     9.23s Requesting snapshot of accessibility hierarchy for app with pid 56058
+    t =     9.27s Requesting snapshot of accessibility hierarchy for app with pid 56058
+QA_TREE error-paywall: Attributes: Application, 0x107c66d00, pid: 56058, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x107c66d00, pid: 56058, label: 'RCBugReporter'
+    Window (Main), 0x107c66e40, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x107c66bc0, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x107c66f80, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x107c67200, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x107c67340, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x107c670c0, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x107c67480, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x107c67700, {{0.0, 0.0}, {386.0, 644.0}}
+                    Other, 0x107c67840, {{0.0, 0.0}, {386.0, 644.0}}
+                      Other, 0x107c675c0, {{0.0, 0.0}, {386.0, 644.0}}
+                        Other, 0x107c67980, {{0.0, 0.0}, {386.0, 644.0}}
+                          Other, 0x107c67c00, {{0.0, 0.0}, {386.0, 644.0}}
+                            StaticText, 0x107c67d40, {{24.0, 158.5}, {235.7, 33.7}}, label: 'SDK Bug Reporter'
+                            StaticText, 0x107c67ac0, {{24.0, 204.2}, {246.0, 19.3}}, label: 'Test Store only — no real charges.'
+                            Button, 0x107c67e80, {{24.0, 255.7}, {338.0, 54.7}}, label: 'Monthly, $9.99/month', Selected
+                              StaticText, 0x107c648c0, {{24.0, 255.5}, {61.7, 19.3}}, label: 'Monthly'
+                              StaticText, 0x107c64780, {{24.0, 282.8}, {93.7, 19.3}}, label: '$9.99/month'
+                            StaticText, 0x104e67980, {{24.0, 326.2}, {316.0, 31.3}}, label: 'Test SDK purchases and restores. Test subscription auto-renews. Cancel anytime.'
+                            Button, 0x104e67c00, {{24.0, 373.7}, {338.0, 52.0}}, label: 'Subscribe'
+                            Button, 0x104e67d40, {{24.0, 441.7}, {338.0, 44.0}}, label: 'Restore Purchases'
+                            Other, 0x104e67ac0, {{0.0, 0.0}, {0.0, 0.0}}
+                Other, 0x104e65540, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x104e65400, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x11154c000, {{0.0, 0.0}, {386.0, 678.0}}
+Path to element:
+ →Application, 0x107c66d00, pid: 56058, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x11154c140, pid: 56058, label: 'RCBugReporter'
+  }
+
+    t =     9.28s Tap Button (First Match)
+    t =     9.28s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     9.28s     Find the Button (First Match)
+    t =     9.29s     Check for interrupting elements affecting "Subscribe" Button
+    t =     9.30s         Wait for com.apple.springboard to idle
+    t =     9.34s     Synthesize event
+    t =     9.63s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     9.71s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =     9.80s Added attachment named 'error-test-store-dialog'
+    t =     9.80s Requesting snapshot of accessibility hierarchy for app with pid 56058
+    t =     9.91s Requesting snapshot of accessibility hierarchy for app with pid 56058
+QA_TREE error-test-store-dialog: Attributes: Application, 0x11154c000, pid: 56058, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x11154c000, pid: 56058, label: 'RCBugReporter'
+    Window (Main), 0x11154d040, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x11154db80, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x11154da40, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x11154d900, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x11154d7c0, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x11154d400, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x11154d680, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x11154d540, {{0.0, 0.0}, {386.0, 644.0}}
+                    Other, 0x11154d2c0, {{0.0, 0.0}, {386.0, 644.0}}
+                      Other, 0x11154d180, {{0.0, 0.0}, {386.0, 644.0}}
+                        Other, 0x11154e080, {{0.0, 0.0}, {386.0, 644.0}}
+                          Other, 0x11154e1c0, {{0.0, 0.0}, {386.0, 644.0}}
+                            StaticText, 0x11154e300, {{24.0, 158.5}, {235.7, 33.7}}, label: 'SDK Bug Reporter', Disabled
+                            StaticText, 0x11154e440, {{24.0, 204.2}, {246.0, 19.3}}, label: 'Test Store only — no real charges.', Disabled
+                            Button, 0x11154e580, {{24.0, 255.7}, {338.0, 54.7}}, label: 'Monthly, $9.99/month', Selected, Disabled
+                              StaticText, 0x11154e6c0, {{24.0, 255.5}, {61.7, 19.3}}, label: 'Monthly', Disabled
+                              StaticText, 0x11154e800, {{24.0, 282.8}, {93.7, 19.3}}, label: '$9.99/month', Disabled
+                            StaticText, 0x11154e940, {{24.0, 326.2}, {316.0, 31.3}}, label: 'Test SDK purchases and restores. Test subscription auto-renews. Cancel anytime.', Disabled
+                            Button, 0x11154ea80, {{24.0, 373.7}, {338.0, 52.0}}, value: 1, Disabled
+                              ActivityIndicator, 0x11154ebc0, {{183.0, 389.7}, {20.0, 20.0}}, value: 1
+                            Button, 0x11154ed00, {{24.0, 441.7}, {338.0, 44.0}}, label: 'Restore Purchases', Disabled
+                            Other, 0x11154ee40, {{0.0, 0.0}, {0.0, 0.0}}, Disabled
+                Other, 0x11154ef80, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x11154f0c0, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x11154f200, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x11154f340, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x11154f480, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x11154f5c0, {{0.0, 0.0}, {386.0, 678.0}}
+        Alert, 0x11154f700, {{33.0, 100.0}, {320.0, 444.0}}, label: 'Test Store Purchase'
+          Other, 0x11154f840, {{33.0, 100.0}, {320.0, 444.0}}
+            Other, 0x11154f980, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x11154fac0, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x11154fc00, {{33.0, 100.0}, {320.0, 444.0}}
+                ScrollView, 0x11154fd40, {{33.0, 100.0}, {320.0, 252.0}}
+                  Other, 0x11154fe80, {{33.0, 100.0}, {320.0, 252.0}}
+                    StaticText, 0x104e65540, {{63.0, 122.0}, {260.0, 20.3}}, label: 'Test Store Purchase'
+                    StaticText, 0x104e65400, {{63.0, 149.7}, {260.0, 198.0}}, label: 'This is a test purchase and should only be used during development. In production, use an Apple API key from RevenueCat.
+
+Product ID: bug_reporter_monthly
+Title: Bug Reporter Monthly
+Price: $9.99
+SubscriptionPeriod: 1 month
+'
+                  Other, 0x104e67ac0, {{33.0, 350.0}, {320.0, 2.0}}
+                  Other, 0x104e67d40, {{320.0, 100.0}, {30.0, 252.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                    Other, 0x104e67c00, {{347.0, 61.0}, {3.0, 36.0}}
+                  Other, 0x104e67980, {{33.0, 319.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x107c66d00, {{-6.0, 346.0}, {36.0, 3.0}}
+                  Other, 0x107c66e40, {{320.0, 100.0}, {30.0, 252.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                    Other, 0x107c66bc0, {{347.0, 61.0}, {3.0, 36.0}}
+                  Other, 0x107c66f80, {{33.0, 319.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x107c67200, {{-6.0, 346.0}, {36.0, 3.0}}
+                ScrollView, 0x107c67340, {{33.0, 352.0}, {320.0, 192.0}}
+                  Other, 0x107c670c0, {{33.0, 352.0}, {320.0, 192.0}}
+                    Other, 0x107c67480, {{49.0, 368.0}, {288.0, 160.0}}
+                      Button, 0x107c67700, {{49.0, 368.0}, {288.0, 48.0}}, label: 'Test valid purchase'
+                      Button, 0x107c67840, {{49.0, 424.0}, {288.0, 48.0}}, label: 'Test failed purchase'
+                      Button, 0x107c675c0, {{49.0, 480.0}, {288.0, 48.0}}, label: 'Cancel'
+                  Other, 0x107c67980, {{320.0, 352.0}, {30.0, 192.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x107c67c00, {{347.0, 442.0}, {3.0, 7.0}}
+                  Other, 0x107c67e80, {{33.0, 511.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x107c64780, {{123.0, 538.0}, {7.0, 3.0}}
+                  Other, 0x107c648c0, {{320.0, 352.0}, {30.0, 192.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x107c67ac0, {{347.0, 442.0}, {3.0, 7.0}}
+                  Other, 0x107c67d40, {{33.0, 511.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x107c65540, {{123.0, 538.0}, {7.0, 3.0}}
+          Other, 0x107c65180, {{33.0, 100.0}, {320.0, 444.0}}
+            Other, 0x107c65400, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x107c657c0, {{33.0, 100.0}, {320.0, 444.0}}
+                Other, 0x107c65680, {{33.0, 100.0}, {320.0, 444.0}}
+                  Other, 0x107c65a40, {{33.0, 100.0}, {320.0, 444.0}}
+                    Other, 0x107c65b80, {{33.0, 100.0}, {466.0, 678.0}}
+                Other, 0x107c65900, {{33.0, 100.0}, {320.0, 444.0}}
+                  Other, 0x107c65e00, {{33.0, 100.0}, {466.0, 678.0}}
+Path to element:
+ →Application, 0x11154c000, pid: 56058, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x107c661c0, pid: 56058, label: 'RCBugReporter'
+  }
+
+    t =     9.93s Waiting 10.0s for "Test failed purchase" Button to exist
+    t =    11.00s     Checking `Expect predicate `existsNoRetry == 1` for object "Test failed purchase" Button`
+    t =    11.00s         Checking existence of `"Test failed purchase" Button`
+    t =    11.02s Tap "Test failed purchase" Button
+    t =    11.02s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =    11.03s     Find the "Test failed purchase" Button
+    t =    11.04s     Check for interrupting elements affecting "Test failed purchase" Button
+    t =    11.06s         Wait for com.apple.springboard to idle
+    t =    11.09s     Synthesize event
+    t =    11.38s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =    11.63s Waiting 20.0s for "Observed result" StaticText to exist
+    t =    12.66s     Checking `Expect predicate `existsNoRetry == 1` for object "Observed result" StaticText`
+    t =    12.66s         Checking existence of `"Observed result" StaticText`
+    t =    12.68s Checking existence of `StaticText (First Match)`
+    t =    12.70s Find the StaticText (First Match)
+    t =    12.71s Find the "Real Test Store user: bug-reporter-rn-error-1791974438401
+
+Offering ready: default
+
+onPurchaseError code="42"; typeof=string
+
+Matching public enum: "42"; typeof=string
+
+Strict equality: true (expected true)
+
+Message: Purchase failure simulated successfully in Test Store." StaticText
+    t =    12.72s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =    12.78s Added attachment named 'error-callback-result'
+    t =    12.78s Requesting snapshot of accessibility hierarchy for app with pid 56058
+    t =    12.83s Requesting snapshot of accessibility hierarchy for app with pid 56058
+QA_TREE error-callback-result: Attributes: Application, 0x111871e00, pid: 56058, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x111871e00, pid: 56058, label: 'RCBugReporter'
+    Window (Main), 0x111871f40, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x111872080, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x1118721c0, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x111872300, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x111872440, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x111872580, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x1118726c0, {{0.0, 0.0}, {386.0, 678.0}}
+                  StaticText, 0x111872800, {{18.0, 18.0}, {350.0, 27.7}}, label: 'RevenueCat Bug Reporter'
+                    StaticText, 0x111872940, {{18.0, 18.0}, {350.0, 27.7}}, label: 'RevenueCat Bug Reporter'
+                  StaticText, 0x111872a80, {{18.0, 50.7}, {350.0, 15.7}}, label: 'React Native 10.13.0 · proposed fixes'
+                    StaticText, 0x111872bc0, {{18.0, 50.7}, {350.0, 15.7}}, label: 'React Native 10.13.0 · proposed fixes'
+                  StaticText, 0x111872e40, {{18.0, 78.3}, {350.0, 33.7}}, label: 'Tap Subscribe, then Test failed purchase in the Test Store dialog.'
+                    StaticText, 0x111872f80, {{18.0, 78.3}, {350.0, 33.7}}, label: 'Tap Subscribe, then Test failed purchase in the Test Store dialog.'
+                  Other, 0x1118730c0, {{0.0, 142.0}, {386.0, 502.0}}, label: 'QA results'
+                    ScrollView, 0x111873200, {{0.0, 142.0}, {386.0, 502.0}}
+                      Other, 0x111873340, {{0.0, 142.0}, {368.0, 434.0}}
+                        Other, 0x111873480, {{18.0, 160.0}, {350.0, 416.0}}
+                          StaticText, 0x1118735c0, {{18.0, 160.0}, {350.0, 24.0}}, label: 'Observed result'
+                            StaticText, 0x111873700, {{18.0, 160.0}, {350.0, 24.0}}, label: 'Observed result'
+                          StaticText, 0x111873840, {{18.0, 196.0}, {350.0, 247.0}}, label: 'Real Test Store user: bug-reporter-rn-error-1791974438401
+
+Offering ready: default
+
+onPurchaseError code="42"; typeof=string
+
+Matching public enum: "42"; typeof=string
+
+Strict equality: true (expected true)
+
+Message: Purchase failure simulated successfully in Test Store.'
+                            StaticText, 0x111873980, {{18.0, 196.0}, {350.0, 247.0}}, label: 'Real Test Store user: bug-reporter-rn-error-1791974438401
+
+Offering ready: default
+
+onPurchaseError code="42"; typeof=string
+
+Matching public enum: "42"; typeof=string
+
+Strict equality: true (expected true)
+
+Message: Purchase failure simulated successfully in Test Store.'
+                          StaticText, 0x111873ac0, {{18.0, 465.0}, {350.0, 38.3}}, label: 'Suggested fix: normalize the native code to String before invoking JS error callbacks.'
+                            StaticText, 0x111873c00, {{18.0, 465.0}, {350.0, 38.3}}, label: 'Suggested fix: normalize the native code to String before invoking JS error callbacks.'
+                          StaticText, 0x111873d40, {{18.0, 519.3}, {350.0, 28.7}}, label: 'Dedicated Test Store · synthetic user · no real charge
+Force-quit and reopen to run another case.'
+                            StaticText, 0x111873e80, {{18.0, 519.3}, {350.0, 28.7}}, label: 'Dedicated Test Store · synthetic user · no real charge
+Force-quit and reopen to run another case.'
+                      Other, 0x104e67980, {{353.0, 142.0}, {30.0, 502.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x104e67d40, {{380.0, 440.3}, {3.0, 95.3}}
+                      Other, 0x104e67c00, {{0.0, 611.0}, {386.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x104e67ac0, {{29.0, 638.0}, {324.0, 3.0}}
+                      Other, 0x104e65400, {{353.0, 142.0}, {30.0, 502.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x104e65540, {{380.0, 440.3}, {3.0, 95.3}}
+                      Other, 0x107c65180, {{0.0, 611.0}, {386.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x107c65400, {{29.0, 638.0}, {324.0, 3.0}}
+                Other, 0x107c657c0, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x107c65900, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x107c65e00, {{0.0, 0.0}, {386.0, 678.0}}
+Path to element:
+ →Application, 0x111871e00, pid: 56058, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x107c65680, pid: 56058, label: 'RCBugReporter'
+  }
+
+    t =    17.84s Tear Down
+Test Case '-[RCBugReporterUITests.ReproductionTests testErrorCallback]' passed (18.093 seconds).
+Test Case '-[RCBugReporterUITests.ReproductionTests testMissingTransaction]' started.
+    t =     0.00s Start Test at 2026-10-14 07:40:49.654
+    t =     0.03s Set Up
+    t =     0.03s Open org.reactjs.native.example.RCBugReporter
+    t =     0.03s     Launch org.reactjs.native.example.RCBugReporter
+    t =     0.03s         Terminate org.reactjs.native.example.RCBugReporter:56058
+2026-10-14 07:40:49.709 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:40:49.713 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:40:49.724 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:40:50.769 xcodebuild[55918:1055696] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-14 07:40:50.769 xcodebuild[55918:1055696] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-14 07:40:50.793 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+    t =     1.33s         Setting up automation session
+    t =     3.35s         Wait for org.reactjs.native.example.RCBugReporter to idle
+<unknown>:0: warning: -[RCBugReporterUITests.ReproductionTests testMissingTransaction] : [Internal] Thread running at User-interactive quality-of-service class waiting on a thread without a QoS class specified (base priority 33). Investigate ways to avoid priority inversions
+    t =     4.64s Waiting 30.0s for "2. Missing transaction" Button to exist
+    t =     5.69s     Checking `Expect predicate `existsNoRetry == 1` for object "2. Missing transaction" Button`
+    t =     5.69s         Checking existence of `"2. Missing transaction" Button`
+    t =     5.73s Tap "2. Missing transaction" Button
+    t =     5.73s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     5.73s     Find the "2. Missing transaction" Button
+    t =     5.74s     Check for interrupting elements affecting "2. Missing transaction" Button
+    t =     5.75s         Wait for com.apple.springboard to idle
+    t =     5.78s     Synthesize event
+    t =     6.06s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     6.07s Waiting 45.0s for Button (First Match) to exist
+    t =     7.11s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =     7.11s         Checking existence of `Button (First Match)`
+    t =     7.26s         Capturing element debug description
+    t =     8.08s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =     8.08s         Checking existence of `Button (First Match)`
+    t =     8.09s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =     8.15s Added attachment named 'transaction-paywall'
+    t =     8.15s Requesting snapshot of accessibility hierarchy for app with pid 56405
+    t =     8.18s Requesting snapshot of accessibility hierarchy for app with pid 56405
+QA_TREE transaction-paywall: Attributes: Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+    Window (Main), 0x111870a00, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x111870b40, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x111870c80, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x111870dc0, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x111870f00, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x111871040, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x111871180, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x111872d00, {{0.0, 0.0}, {386.0, 644.0}}
+                    Other, 0x107c64f00, {{0.0, 0.0}, {386.0, 644.0}}
+                      Other, 0x107c65680, {{0.0, 0.0}, {386.0, 644.0}}
+                        Other, 0x107c65a40, {{0.0, 0.0}, {386.0, 644.0}}
+                          Other, 0x107c65b80, {{0.0, 0.0}, {386.0, 644.0}}
+                            StaticText, 0x107c67340, {{24.0, 158.5}, {235.7, 33.7}}, label: 'SDK Bug Reporter'
+                            StaticText, 0x107c67d40, {{24.0, 204.2}, {246.0, 19.3}}, label: 'Test Store only — no real charges.'
+                            Button, 0x107c65540, {{24.0, 255.7}, {338.0, 54.7}}, label: 'Monthly, $9.99/month', Selected
+                              StaticText, 0x107c648c0, {{24.0, 255.5}, {61.7, 19.3}}, label: 'Monthly'
+                              StaticText, 0x107c67ac0, {{24.0, 282.8}, {93.7, 19.3}}, label: '$9.99/month'
+                            StaticText, 0x107c675c0, {{24.0, 326.2}, {316.0, 31.3}}, label: 'Test SDK purchases and restores. Test subscription auto-renews. Cancel anytime.'
+                            Button, 0x107c67840, {{24.0, 373.7}, {338.0, 52.0}}, label: 'Subscribe'
+                            Button, 0x107c66a80, {{24.0, 441.7}, {338.0, 44.0}}, label: 'Restore Purchases'
+                            Other, 0x107c652c0, {{0.0, 0.0}, {0.0, 0.0}}
+                Other, 0x107c67700, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x107c66f80, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x107c666c0, {{0.0, 0.0}, {386.0, 678.0}}
+Path to element:
+ →Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x107c66440, pid: 56405, label: 'RCBugReporter'
+  }
+
+    t =     8.19s Tap Button (First Match)
+    t =     8.19s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     8.19s     Find the Button (First Match)
+    t =     8.20s     Check for interrupting elements affecting "Subscribe" Button
+    t =     8.21s         Wait for com.apple.springboard to idle
+    t =     8.24s     Synthesize event
+    t =     8.53s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =     8.89s Waiting 10.0s for "Test valid purchase" Button to exist
+    t =     9.95s     Checking `Expect predicate `existsNoRetry == 1` for object "Test valid purchase" Button`
+    t =     9.95s         Checking existence of `"Test valid purchase" Button`
+    t =     9.97s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =    10.04s Added attachment named 'transaction-test-store-dialog'
+    t =    10.04s Requesting snapshot of accessibility hierarchy for app with pid 56405
+    t =    10.12s Requesting snapshot of accessibility hierarchy for app with pid 56405
+QA_TREE transaction-test-store-dialog: Attributes: Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+    Window (Main), 0x111870a00, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x111870b40, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x111870c80, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x111870dc0, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x111870f00, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x111871040, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x111871180, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x111872d00, {{0.0, 0.0}, {386.0, 644.0}}
+                    Other, 0x111870640, {{0.0, 0.0}, {386.0, 644.0}}
+                      Other, 0x111870780, {{0.0, 0.0}, {386.0, 644.0}}
+                        Other, 0x107c67700, {{0.0, 0.0}, {386.0, 644.0}}
+                          Other, 0x107c66f80, {{0.0, 0.0}, {386.0, 644.0}}
+                            StaticText, 0x107c666c0, {{24.0, 158.5}, {235.7, 33.7}}, label: 'SDK Bug Reporter', Disabled
+                            StaticText, 0x107c64f00, {{24.0, 204.2}, {246.0, 19.3}}, label: 'Test Store only — no real charges.', Disabled
+                            Button, 0x107c65680, {{24.0, 255.7}, {338.0, 54.7}}, label: 'Monthly, $9.99/month', Selected, Disabled
+                              StaticText, 0x107c65a40, {{24.0, 255.5}, {61.7, 19.3}}, label: 'Monthly', Disabled
+                              StaticText, 0x107c65b80, {{24.0, 282.8}, {93.7, 19.3}}, label: '$9.99/month', Disabled
+                            StaticText, 0x107c652c0, {{24.0, 326.2}, {316.0, 31.3}}, label: 'Test SDK purchases and restores. Test subscription auto-renews. Cancel anytime.', Disabled
+                            Button, 0x107c66a80, {{24.0, 373.7}, {338.0, 52.0}}, value: 1, Disabled
+                              ActivityIndicator, 0x107c67840, {{183.0, 389.7}, {20.0, 20.0}}, value: 1
+                            Button, 0x107c675c0, {{24.0, 441.7}, {338.0, 44.0}}, label: 'Restore Purchases', Disabled
+                            Other, 0x107c65540, {{0.0, 0.0}, {0.0, 0.0}}, Disabled
+                Other, 0x107c67ac0, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x107c648c0, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x107c67d40, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x107c67340, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x11154c000, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x11154c140, {{0.0, 0.0}, {386.0, 678.0}}
+        Alert, 0x11154c280, {{33.0, 100.0}, {320.0, 444.0}}, label: 'Test Store Purchase'
+          Other, 0x11154c3c0, {{33.0, 100.0}, {320.0, 444.0}}
+            Other, 0x11154c500, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x11154c640, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x11154c780, {{33.0, 100.0}, {320.0, 444.0}}
+                ScrollView, 0x11154c8c0, {{33.0, 100.0}, {320.0, 252.0}}
+                  Other, 0x11154ca00, {{33.0, 100.0}, {320.0, 252.0}}
+                    StaticText, 0x11154cb40, {{63.0, 122.0}, {260.0, 20.3}}, label: 'Test Store Purchase'
+                    StaticText, 0x11154cc80, {{63.0, 149.7}, {260.0, 198.0}}, label: 'This is a test purchase and should only be used during development. In production, use an Apple API key from RevenueCat.
+
+Product ID: bug_reporter_monthly
+Title: Bug Reporter Monthly
+Price: $9.99
+SubscriptionPeriod: 1 month
+'
+                  Other, 0x11154cdc0, {{33.0, 350.0}, {320.0, 2.0}}
+                  Other, 0x11154cf00, {{320.0, 100.0}, {30.0, 252.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                    Other, 0x11154d040, {{347.0, 61.0}, {3.0, 36.0}}
+                  Other, 0x11154d180, {{33.0, 319.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x11154d2c0, {{-6.0, 346.0}, {36.0, 3.0}}
+                  Other, 0x11154d400, {{320.0, 100.0}, {30.0, 252.0}}, label: 'Vertical scroll bar, 2 pages', value: 0%
+                    Other, 0x11154d540, {{347.0, 61.0}, {3.0, 36.0}}
+                  Other, 0x11154d680, {{33.0, 319.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x11154d7c0, {{-6.0, 346.0}, {36.0, 3.0}}
+                ScrollView, 0x11154d900, {{33.0, 352.0}, {320.0, 192.0}}
+                  Other, 0x11154da40, {{33.0, 352.0}, {320.0, 192.0}}
+                    Other, 0x11154db80, {{49.0, 368.0}, {288.0, 160.0}}
+                      Button, 0x11154dcc0, {{49.0, 368.0}, {288.0, 48.0}}, label: 'Test valid purchase'
+                      Button, 0x11154de00, {{49.0, 424.0}, {288.0, 48.0}}, label: 'Test failed purchase'
+                      Button, 0x11154df40, {{49.0, 480.0}, {288.0, 48.0}}, label: 'Cancel'
+                  Other, 0x11154e080, {{320.0, 352.0}, {30.0, 192.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x11154e1c0, {{347.0, 442.0}, {3.0, 7.0}}
+                  Other, 0x11154e300, {{33.0, 511.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x11154e440, {{123.0, 538.0}, {7.0, 3.0}}
+                  Other, 0x11154e580, {{320.0, 352.0}, {30.0, 192.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                    Other, 0x11154e6c0, {{347.0, 442.0}, {3.0, 7.0}}
+                  Other, 0x11154e800, {{33.0, 511.0}, {320.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                    Other, 0x11154e940, {{123.0, 538.0}, {7.0, 3.0}}
+          Other, 0x11154ea80, {{33.0, 100.0}, {320.0, 444.0}}
+            Other, 0x11154ebc0, {{33.0, 100.0}, {320.0, 444.0}}
+              Other, 0x11154ed00, {{33.0, 100.0}, {320.0, 444.0}}
+                Other, 0x11154ee40, {{33.0, 100.0}, {320.0, 444.0}}
+                  Other, 0x11154ef80, {{33.0, 100.0}, {320.0, 444.0}}
+                    Other, 0x11154f0c0, {{33.0, 100.0}, {466.0, 678.0}}
+                Other, 0x11154f200, {{33.0, 100.0}, {320.0, 444.0}}
+                  Other, 0x11154f340, {{33.0, 100.0}, {466.0, 678.0}}
+Path to element:
+ →Application, 0x1118708c0, pid: 56405, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x11154f480, pid: 56405, label: 'RCBugReporter'
+  }
+
+    t =    10.14s Tap "Test valid purchase" Button
+    t =    10.14s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =    10.14s     Find the "Test valid purchase" Button
+    t =    10.15s     Check for interrupting elements affecting "Test valid purchase" Button
+    t =    10.17s         Wait for com.apple.springboard to idle
+    t =    10.20s     Synthesize event
+    t =    10.49s     Wait for org.reactjs.native.example.RCBugReporter to idle
+    t =    10.73s Waiting 30.0s for "Observed result" StaticText to exist
+    t =    11.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Observed result" StaticText`
+    t =    11.81s         Checking existence of `"Observed result" StaticText`
+    t =    11.83s Checking existence of `StaticText (First Match)`
+    t =    11.84s Find the StaticText (First Match)
+    t =    11.85s Find the "Real Test Store user: bug-reporter-rn-transaction-1791974455517
+
+Offering ready: default
+
+Custom purchase logic: calling real Purchases.purchasePackage
+
+Real purchase completed. Entitlements: qa_premium
+
+onPurchaseCompleted: entitlement active=true
+
+storeTransaction = undefined
+
+No transaction supplied; handled safely." StaticText
+    t =    11.87s Find the Target Application 'org.reactjs.native.example.RCBugReporter'
+    t =    11.93s Added attachment named 'missing-transaction-result'
+    t =    11.93s Requesting snapshot of accessibility hierarchy for app with pid 56405
+    t =    11.97s Requesting snapshot of accessibility hierarchy for app with pid 56405
+QA_TREE missing-transaction-result: Attributes: Application, 0x111875180, pid: 56405, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x111875180, pid: 56405, label: 'RCBugReporter'
+    Window (Main), 0x1118752c0, {{0.0, 0.0}, {386.0, 678.0}}
+      Other, 0x111875400, {{0.0, 0.0}, {386.0, 678.0}}
+        Other, 0x111875540, {{0.0, 0.0}, {386.0, 678.0}}
+          Other, 0x111875680, {{0.0, 0.0}, {386.0, 678.0}}
+            Other, 0x1118757c0, {{0.0, 0.0}, {386.0, 678.0}}
+              Other, 0x111875900, {{0.0, 0.0}, {386.0, 678.0}}
+                Other, 0x111875a40, {{0.0, 0.0}, {386.0, 678.0}}
+                  StaticText, 0x111875b80, {{18.0, 18.0}, {350.0, 27.7}}, label: 'RevenueCat Bug Reporter'
+                    StaticText, 0x111875cc0, {{18.0, 18.0}, {350.0, 27.7}}, label: 'RevenueCat Bug Reporter'
+                  StaticText, 0x111875e00, {{18.0, 50.7}, {350.0, 15.7}}, label: 'React Native 10.13.0 · proposed fixes'
+                    StaticText, 0x111875f40, {{18.0, 50.7}, {350.0, 15.7}}, label: 'React Native 10.13.0 · proposed fixes'
+                  StaticText, 0x1118761c0, {{18.0, 78.3}, {350.0, 33.7}}, label: 'Tap Subscribe, then Test valid purchase. Custom purchase logic completes the real test purchase.'
+                    StaticText, 0x111876300, {{18.0, 78.3}, {350.0, 33.7}}, label: 'Tap Subscribe, then Test valid purchase. Custom purchase logic completes the real test purchase.'
+                  Other, 0x111876440, {{0.0, 142.0}, {386.0, 502.0}}, label: 'QA results'
+                    ScrollView, 0x111876580, {{0.0, 142.0}, {386.0, 502.0}}
+                      Other, 0x1118766c0, {{0.0, 142.0}, {368.0, 491.0}}
+                        Other, 0x111876800, {{18.0, 160.0}, {350.0, 473.0}}
+                          StaticText, 0x111876940, {{18.0, 160.0}, {350.0, 24.0}}, label: 'Observed result'
+                            StaticText, 0x111876a80, {{18.0, 160.0}, {350.0, 24.0}}, label: 'Observed result'
+                          StaticText, 0x111876bc0, {{18.0, 196.0}, {350.0, 304.0}}, label: 'Real Test Store user: bug-reporter-rn-transaction-1791974455517
+
+Offering ready: default
+
+Custom purchase logic: calling real Purchases.purchasePackage
+
+Real purchase completed. Entitlements: qa_premium
+
+onPurchaseCompleted: entitlement active=true
+
+storeTransaction = undefined
+
+No transaction supplied; handled safely.'
+                            StaticText, 0x111876d00, {{18.0, 196.0}, {350.0, 304.0}}, label: 'Real Test Store user: bug-reporter-rn-transaction-1791974455517
+
+Offering ready: default
+
+Custom purchase logic: calling real Purchases.purchasePackage
+
+Real purchase completed. Entitlements: qa_premium
+
+onPurchaseCompleted: entitlement active=true
+
+storeTransaction = undefined
+
+No transaction supplied; handled safely.'
+                          StaticText, 0x111876e40, {{18.0, 522.0}, {350.0, 38.3}}, label: 'Suggested fix: declare storeTransaction optional and require a null check before reading it.'
+                            StaticText, 0x111876f80, {{18.0, 522.0}, {350.0, 38.3}}, label: 'Suggested fix: declare storeTransaction optional and require a null check before reading it.'
+                          StaticText, 0x1118770c0, {{18.0, 576.3}, {350.0, 28.7}}, label: 'Dedicated Test Store · synthetic user · no real charge
+Force-quit and reopen to run another case.'
+                            StaticText, 0x111877200, {{18.0, 576.3}, {350.0, 28.7}}, label: 'Dedicated Test Store · synthetic user · no real charge
+Force-quit and reopen to run another case.'
+                      Other, 0x111877340, {{353.0, 142.0}, {30.0, 502.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x111877480, {{380.0, 440.3}, {3.0, 95.3}}
+                      Other, 0x1118775c0, {{0.0, 611.0}, {386.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x111877700, {{29.0, 638.0}, {324.0, 3.0}}
+                      Other, 0x111877840, {{353.0, 142.0}, {30.0, 502.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x111877980, {{380.0, 440.3}, {3.0, 95.3}}
+                      Other, 0x111877ac0, {{0.0, 611.0}, {386.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x111877c00, {{29.0, 638.0}, {324.0, 3.0}}
+                Other, 0x111877d40, {{0.0, 0.0}, {386.0, 678.0}}
+                  Other, 0x111877e80, {{0.0, 0.0}, {386.0, 678.0}}
+                    Other, 0x11154c280, {{0.0, 0.0}, {386.0, 678.0}}
+Path to element:
+ →Application, 0x111875180, pid: 56405, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'org.reactjs.native.example.RCBugReporter'
+  Output: {
+    Application, 0x11154ea80, pid: 56405, label: 'RCBugReporter'
+  }
+
+    t =    16.98s Tear Down
+Test Case '-[RCBugReporterUITests.ReproductionTests testMissingTransaction]' passed (17.205 seconds).
+Test Suite 'ReproductionTests' passed at 2026-10-14 07:41:06.860.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 35.298 (35.302) seconds
+Test Suite 'RCBugReporterUITests.xctest' passed at 2026-10-14 07:41:06.863.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 35.298 (35.306) seconds
+Test Suite 'All tests' passed at 2026-10-14 07:41:06.863.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 35.298 (35.307) seconds
+2026-10-14 07:41:06.900 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:06.900 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:06.900 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:06.912 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:06.912 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:06.913 xcodebuild[55918:1055696] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-14 07:41:22.724 xcodebuild[55918:1055696] [MT] IDETestOperationsObserverDebug: 58.249 elapsed -- Testing started completed.
+2026-10-14 07:41:22.724 xcodebuild[55918:1055696] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-14 07:41:22.724 xcodebuild[55918:1055696] [MT] IDETestOperationsObserverDebug: 58.249 sec, +58.249 sec -- end
+
+Test session results, code coverage, and logs:
+	<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/reproductions/2026-10-14/evidence/native-fixed-recorded.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

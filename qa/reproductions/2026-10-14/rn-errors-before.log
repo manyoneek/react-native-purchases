@@ -1,0 +1,89 @@
+
+> react-native-purchases-ui@10.13.0 test
+> jest --runInBand nativeBoundaryRegression.test.ts
+
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+FAIL __tests__/nativeBoundaryRegression.test.ts
+  native UI boundary regression: error codes
+    ✕ embedded onPurchaseError delivers the public string NETWORK_ERROR code (2 ms)
+    ✕ embedded onRestoreError delivers the public string NETWORK_ERROR code
+    ✕ presented onPurchaseError delivers the public string NETWORK_ERROR code
+    ✕ presented onRestoreError delivers the public string NETWORK_ERROR code
+
+  ● native UI boundary regression: error codes › embedded onPurchaseError delivers the public string NETWORK_ERROR code
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "10"
+    Received: 10
+
+      53 |       props[callbackName]!({ nativeEvent: nativeEvents[callbackName] });
+      54 |       expect(callback).toHaveBeenCalledTimes(1);
+    > 55 |       expect(callback.mock.calls[0][0].error.code).toBe(PURCHASES_ERROR_CODE.NETWORK_ERROR);
+         |                                                    ^
+      56 |     });
+      57 |
+      58 |   it.each(['onPurchaseError', 'onRestoreError'] as const)(
+
+      at __tests__/nativeBoundaryRegression.test.ts:55:52
+
+  ● native UI boundary regression: error codes › embedded onRestoreError delivers the public string NETWORK_ERROR code
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "10"
+    Received: 10
+
+      53 |       props[callbackName]!({ nativeEvent: nativeEvents[callbackName] });
+      54 |       expect(callback).toHaveBeenCalledTimes(1);
+    > 55 |       expect(callback.mock.calls[0][0].error.code).toBe(PURCHASES_ERROR_CODE.NETWORK_ERROR);
+         |                                                    ^
+      56 |     });
+      57 |
+      58 |   it.each(['onPurchaseError', 'onRestoreError'] as const)(
+
+      at __tests__/nativeBoundaryRegression.test.ts:55:52
+
+  ● native UI boundary regression: error codes › presented onPurchaseError delivers the public string NETWORK_ERROR code
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "10"
+    Received: 10
+
+      68 |       await presented;
+      69 |       expect(callback).toHaveBeenCalledTimes(1);
+    > 70 |       expect(callback.mock.calls[0][0].error.code).toBe(PURCHASES_ERROR_CODE.NETWORK_ERROR);
+         |                                                    ^
+      71 |     });
+      72 | });
+      73 |
+
+      at __tests__/nativeBoundaryRegression.test.ts:70:52
+
+  ● native UI boundary regression: error codes › presented onRestoreError delivers the public string NETWORK_ERROR code
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "10"
+    Received: 10
+
+      68 |       await presented;
+      69 |       expect(callback).toHaveBeenCalledTimes(1);
+    > 70 |       expect(callback.mock.calls[0][0].error.code).toBe(PURCHASES_ERROR_CODE.NETWORK_ERROR);
+         |                                                    ^
+      71 |     });
+      72 | });
+      73 |
+
+      at __tests__/nativeBoundaryRegression.test.ts:70:52
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        0.704 s, estimated 1 s
+Ran all test suites matching /nativeBoundaryRegression.test.ts/i.

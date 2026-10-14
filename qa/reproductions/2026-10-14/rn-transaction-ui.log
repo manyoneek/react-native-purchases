@@ -1,0 +1,36 @@
+
+> react-native-purchases-ui@10.13.0 test
+> jest --runInBand
+
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+PASS __tests__/presentPaywallCallbacks.test.ts
+PASS __tests__/customVariables.test.ts
+PASS __tests__/presentPaywallCallbacksPreview.test.ts
+  ● Console
+
+    console.warn
+      [RevenueCatUI] [presentPaywall] This method is available but has no effect in Preview API mode.
+
+      1026 |     if (usingPreviewAPIMode) {
+      1027 |       // tslint:disable-next-line:no-console
+    > 1028 |       console.warn(`[RevenueCatUI] [${methodName}] This method is available but has no effect in Preview API mode.`);
+           |               ^
+      1029 |     }
+      1030 |   }
+      1031 | }
+
+      at RevenueCatUI.logWarningIfPreviewAPIMode (src/index.tsx:1028:15)
+      at RevenueCatUI.presentPaywall (src/index.tsx:610:18)
+      at Object.<anonymous> (__tests__/presentPaywallCallbacksPreview.test.ts:26:34)
+
+PASS __tests__/nativeBoundaryRegression.test.ts
+
+Test Suites: 4 passed, 4 total
+Tests:       35 passed, 35 total
+Snapshots:   0 total
+Time:        0.696 s, estimated 1 s
+Ran all test suites.

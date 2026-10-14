@@ -1,0 +1,1 @@
+react-native-app/App.tsx(61,38): error TS18048: 'storeTransaction' is possibly 'undefined'.

@@ -1,0 +1,5 @@
+
+> react-native-purchases-ui@10.13.0 apitest
+> echo "Running react-native-purchases-ui API type checks" && tsc --project apitesters/tsconfig.json
+
+Running react-native-purchases-ui API type checks
