@@ -3448,6 +3448,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.5":
+  version: 7.29.10
+  resolution: "@babel/runtime@npm:7.29.10"
+  checksum: b0ea4fdc84105e46d4a22fe6af7f835397294b0291795f9c0c3e1ad917a5bfdbd38914ea717007e12904ec4ccb8b5a4b05a1acd45ccae3e424cdc0ef2df4912a
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.8.4":
   version: 7.26.9
   resolution: "@babel/runtime@npm:7.26.9"
@@ -3613,6 +3620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iabtcf/core@npm:^1.5.6":
+  version: 1.5.6
+  resolution: "@iabtcf/core@npm:1.5.6"
+  checksum: 561626b626ee476dea5dd3a6ed0ebc26caac2475fc9509583f0e66c92ad67c3a2c2816b3516a4f043904b40607c9a4d44cbacbf09a5897740fd273e057c02c2c
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -3718,7 +3732,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/create-cache-key-function@npm:^29.6.3":
+"@jest/create-cache-key-function@npm:^29.6.3, @jest/create-cache-key-function@npm:^29.7.0":
   version: 29.7.0
   resolution: "@jest/create-cache-key-function@npm:29.7.0"
   dependencies:
@@ -4717,6 +4731,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/jest-preset@npm:0.87.1":
+  version: 0.87.1
+  resolution: "@react-native/jest-preset@npm:0.87.1"
+  dependencies:
+    "@jest/create-cache-key-function": ^29.7.0
+    "@react-native/js-polyfills": 0.87.1
+    babel-jest: ^29.7.0
+    jest-environment-node: ^29.7.0
+    regenerator-runtime: ^0.13.2
+  peerDependencies:
+    react: ^19.2.3
+  checksum: 6c69fcd6659fad633d5ed46636bcb5530d4833221c5e7c243ab7cd2fb633b497f8c8b88883494c36e278e1ec91aa950c29dab4ffb5e39518bead71781aa86394
+  languageName: node
+  linkType: hard
+
 "@react-native/js-polyfills@npm:0.78.0":
   version: 0.78.0
   resolution: "@react-native/js-polyfills@npm:0.78.0"
@@ -5004,26 +5033,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@revenuecat/purchases-js-hybrid-mappings@npm:19.11.0":
-  version: 19.11.0
-  resolution: "@revenuecat/purchases-js-hybrid-mappings@npm:19.11.0"
+"@revenuecat/purchases-js-hybrid-mappings@npm:19.14.0":
+  version: 19.14.0
+  resolution: "@revenuecat/purchases-js-hybrid-mappings@npm:19.14.0"
   dependencies:
-    "@revenuecat/purchases-js": 1.70.0
-  checksum: fe430071da1377f5f151ec0cd47b9dfb41738cdf8573c41c8755d5570c9772d2a5240c2d585678c39153ca3fd4e15f45d5c3b69bf3f86a76258a53428358c98e
+    "@revenuecat/purchases-js": 1.71.0
+  checksum: 198b63a34c6913f9fe54505f861b60e13584e337ae59a012b39708d4c66f2d6a276700c1e5b7da3bac21bdec24bc74fd0dbc82fafc796f3dedae0f23d8022aa7
   languageName: node
   linkType: hard
 
-"@revenuecat/purchases-js@npm:1.70.0":
-  version: 1.70.0
-  resolution: "@revenuecat/purchases-js@npm:1.70.0"
-  checksum: 125a9c88c984a2b0ced0efe2b063d89e2e1790c9f09b8e8183534085ff57fa110d917c3297a5db86f1c0c928e9894ecbb179810d4101babaeca739ff43dd31b0
+"@revenuecat/purchases-js@npm:1.71.0":
+  version: 1.71.0
+  resolution: "@revenuecat/purchases-js@npm:1.71.0"
+  checksum: 25ddfd531accc7fb11844d26c9d7a571a8163b4f147f59b310cc5019cba12b944c22d2f9faebe710133bacec60ec4583e04761b38277c324785752ef17dec2e5
   languageName: node
   linkType: hard
 
-"@revenuecat/purchases-typescript-internal@npm:19.11.0":
-  version: 19.11.0
-  resolution: "@revenuecat/purchases-typescript-internal@npm:19.11.0"
-  checksum: 503f3330d4ddd7c82861f800bcb41e78b9ebe41a5d2750090968c5385ff4c88e355db2bd91bce387af9dd5df5c68af12843add194d6ca3ad723bcc1b944b958d
+"@revenuecat/purchases-typescript-internal@npm:19.14.0":
+  version: 19.14.0
+  resolution: "@revenuecat/purchases-typescript-internal@npm:19.14.0"
+  checksum: 61442dc8008359b768f1f8bb5b1f7782b8988062b43e22cda571e297344a332969332fa3484970c899f05891b65a588e4058ac1173f133d74168322451cb4795
   languageName: node
   linkType: hard
 
@@ -5207,6 +5236,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 9212b3793707a763f10e2c608f6ccb5f729029da6cb84204f333634d3d7baafbc1b20b7faf7cf788a8fd385050a1fb579902031f9462473ef10607116f33f33c
+  languageName: node
+  linkType: hard
+
+"@types/react-test-renderer@npm:^18.0.7":
+  version: 18.3.1
+  resolution: "@types/react-test-renderer@npm:18.3.1"
+  dependencies:
+    "@types/react": ^18
+  checksum: f8cc23cc8decdb6068cdc8f8c306e189eab8e569443ce97b216e757ee42eb20b18d2280ef41e2955668413f14be92765a3ba86cfcfeeae6b20c965acd9674786
   languageName: node
   linkType: hard
 
@@ -6528,6 +6566,13 @@ __metadata:
   version: 2.0.0
   resolution: "depd@npm:2.0.0"
   checksum: abbe19c768c97ee2eed6282d8ce3031126662252c58d711f646921c9623f9052e3e1906443066beec1095832f534e57c523b7333f8e7e0d93051ab6baef5ab3a
+  languageName: node
+  linkType: hard
+
+"dequal@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "dequal@npm:2.0.3"
+  checksum: 8679b850e1a3d0ebbc46ee780d5df7b478c23f335887464023a631d1b9af051ad4a6595a44220f9ff8ff95a8ddccf019b5ad778a976fd7bbf77383d36f412f90
   languageName: node
   linkType: hard
 
@@ -9641,6 +9686,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"object-assign@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "object-assign@npm:4.1.1"
+  checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
+  languageName: node
+  linkType: hard
+
 "object-inspect@npm:^1.13.3, object-inspect@npm:^1.13.4":
   version: 1.13.4
   resolution: "object-inspect@npm:1.13.4"
@@ -10075,7 +10127,7 @@ __metadata:
     babel-plugin-module-resolver: ^5.0.0
     react: 19.2.3
     react-native: 0.87.1
-    react-native-purchases-store-galaxy: 10.13.0
+    react-native-purchases-store-galaxy: 10.15.0
     react-native-safe-area-context: ^5.10.1
     react-native-screens: ^4.28.0
     typescript: ^6.0.3
@@ -10175,6 +10227,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.2.0":
+  version: 18.3.1
+  resolution: "react-is@npm:18.3.1"
+  checksum: e20fe84c86ff172fc8d898251b7cc2c43645d108bf96d0b8edf39b98f9a2cae97b40520ee7ed8ee0085ccc94736c4886294456033304151c3f94978cec03df21
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -10186,13 +10245,6 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
-  languageName: node
-  linkType: hard
-
-"react-is@npm:^18.0.0":
-  version: 18.3.1
-  resolution: "react-is@npm:18.3.1"
-  checksum: e20fe84c86ff172fc8d898251b7cc2c43645d108bf96d0b8edf39b98f9a2cae97b40520ee7ed8ee0085ccc94736c4886294456033304151c3f94978cec03df21
   languageName: node
   linkType: hard
 
@@ -10236,6 +10288,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-google-mobile-ads@npm:^17.0.0":
+  version: 17.2.0
+  resolution: "react-native-google-mobile-ads@npm:17.2.0"
+  dependencies:
+    "@iabtcf/core": ^1.5.6
+    use-deep-compare-effect: ^1.8.1
+  peerDependencies:
+    expo: ">=47.0.0"
+    react: "*"
+    react-native: ">=0.86.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 62e676f0d139320198b44d38796b98ec29aa56fdfa206b1fc372af34e5f947b2fd281d9740ab6cfea8231d78e43dbf1af2eed68de9a25f9c51fdd0e1c58051e7
+  languageName: node
+  linkType: hard
+
 "react-native-is-edge-to-edge@npm:^1.1.7":
   version: 1.1.7
   resolution: "react-native-is-edge-to-edge@npm:1.1.7"
@@ -10246,11 +10315,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-purchases-store-galaxy@10.13.0, react-native-purchases-store-galaxy@workspace:react-native-purchases-store-galaxy":
+"react-native-purchases-admob@workspace:react-native-purchases-admob":
+  version: 0.0.0-use.local
+  resolution: "react-native-purchases-admob@workspace:react-native-purchases-admob"
+  dependencies:
+    "@types/jest": ^29.5.12
+    "@types/react": ^18.2.44
+    "@types/react-dom": ~18.2.0
+    "@types/react-test-renderer": ^18.0.7
+    jest: ^29.7.0
+    jest-react-native: ^18.0.0
+    prettier: ^2.0.5
+    react: 18.2.0
+    react-native: 0.78.0
+    react-native-builder-bob: ^0.20.0
+    react-native-google-mobile-ads: ^17.0.0
+    react-test-renderer: 18.2.0
+    ts-jest: ^29.1.2
+    tslint: ^5.20.0
+    tslint-config-prettier: ^1.18.0
+    typescript: ^5.2.2
+  peerDependencies:
+    react: "*"
+    react-native: ">= 0.76.0"
+    react-native-google-mobile-ads: ">= 17.0.0 < 18.0.0"
+    react-native-purchases: 10.15.0
+  languageName: unknown
+  linkType: soft
+
+"react-native-purchases-store-galaxy@10.15.0, react-native-purchases-store-galaxy@workspace:react-native-purchases-store-galaxy":
   version: 0.0.0-use.local
   resolution: "react-native-purchases-store-galaxy@workspace:react-native-purchases-store-galaxy"
   dependencies:
-    "@revenuecat/purchases-typescript-internal": 19.11.0
+    "@revenuecat/purchases-typescript-internal": 19.14.0
     "@types/jest": ^29.5.12
     "@types/react": ^18.2.44
     "@types/react-dom": ~18.2.0
@@ -10268,7 +10365,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: ">= 0.73.0"
-    react-native-purchases: 10.13.0
+    react-native-purchases: 10.15.0
     react-native-web: "*"
   peerDependenciesMeta:
     react-native-web:
@@ -10280,7 +10377,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-native-purchases-ui@workspace:react-native-purchases-ui"
   dependencies:
-    "@revenuecat/purchases-typescript-internal": 19.11.0
+    "@revenuecat/purchases-typescript-internal": 19.14.0
     "@types/jest": ^29.5.12
     "@types/react": ^18.2.44
     "@types/react-dom": ~18.2.0
@@ -10300,7 +10397,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: ">= 0.73.0"
-    react-native-purchases: 10.13.0
+    react-native-purchases: 10.15.0
     react-native-web: "*"
   peerDependenciesMeta:
     react-native-web:
@@ -10312,8 +10409,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-native-purchases@workspace:."
   dependencies:
-    "@revenuecat/purchases-js-hybrid-mappings": 19.11.0
-    "@revenuecat/purchases-typescript-internal": 19.11.0
+    "@babel/core": ^7.25.2
+    "@react-native/babel-preset": 0.87.1
+    "@react-native/jest-preset": 0.87.1
+    "@revenuecat/purchases-js-hybrid-mappings": 19.14.0
+    "@revenuecat/purchases-typescript-internal": 19.14.0
     "@types/jest": ^29.5.12
     "@types/react": ^18.2.44
     "@types/react-dom": ~18.2.0
@@ -10323,7 +10423,7 @@ __metadata:
     pod-install: ^0.1.0
     prettier: ^2.0.5
     react: 18.2.0
-    react-native: 0.78.0
+    react-native: 0.87.1
     ts-jest: ^29.1.2
     tslint: ^5.20.0
     tslint-config-prettier: ^1.18.0
@@ -10488,6 +10588,31 @@ __metadata:
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
   checksum: d80db4bd40a36dab79010dc8aa317a5b931f960c0d83c4f3b81f0552cbcf7f29e115b84bb7908ec6a1eb67720fff7023084eff73ece8a7ddc694882478464382
+  languageName: node
+  linkType: hard
+
+"react-shallow-renderer@npm:^16.15.0":
+  version: 16.15.0
+  resolution: "react-shallow-renderer@npm:16.15.0"
+  dependencies:
+    object-assign: ^4.1.1
+    react-is: ^16.12.0 || ^17.0.0 || ^18.0.0
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 6052c7e3e9627485120ebd8257f128aad8f56386fe8d42374b7743eac1be457c33506d153c7886b4e32923c0c352d402ab805ef9ca02dbcd8393b2bdeb6e5af8
+  languageName: node
+  linkType: hard
+
+"react-test-renderer@npm:18.2.0":
+  version: 18.2.0
+  resolution: "react-test-renderer@npm:18.2.0"
+  dependencies:
+    react-is: ^18.2.0
+    react-shallow-renderer: ^16.15.0
+    scheduler: ^0.23.0
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 6b6980ced93fa2b72662d5e4ab3b4896833586940047ce52ca9aca801e5432adf05fcbe28289b0af3ce6a2a7c590974e25dcc8aa43d0de658bfe8bbcd686f958
   languageName: node
   linkType: hard
 
@@ -10840,6 +10965,15 @@ __metadata:
   version: 0.27.0
   resolution: "scheduler@npm:0.27.0"
   checksum: 92644ead0a9443e20f9d24132fe93675b156209b9eeb35ea245f8a86768d0cc0fcca56f341eeef21d9b6dd8e72d6d5e260eb5a41d34b05cd605dd45a29f572ef
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.0":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 3e82d1f419e240ef6219d794ff29c7ee415fbdc19e038f680a10c067108e06284f1847450a210b29bbaf97b9d8a97ced5f624c31c681248ac84c80d56ad5a2c4
   languageName: node
   linkType: hard
 
@@ -11784,6 +11918,18 @@ __metadata:
   bin:
     update-browserslist-db: cli.js
   checksum: 6f209a97ae8eacdd3a1ef2eb365adf49d1e2a757e5b2dd4ac87dc8c99236cbe3e572d3e605a87dd7b538a11751b71d9f93edc47c7405262a293a493d155316cd
+  languageName: node
+  linkType: hard
+
+"use-deep-compare-effect@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "use-deep-compare-effect@npm:1.8.1"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    dequal: ^2.0.2
+  peerDependencies:
+    react: ">=16.13"
+  checksum: 2b9b6291df3f772f44d259b352e5d998963ccee0db2efeb76bb05525d928064aeeb69bb0dee5a5e428fea7cf3db67c097a770ebd30caa080662b565f6ef02b2e
   languageName: node
   linkType: hard
 
