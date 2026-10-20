@@ -222,6 +222,16 @@ export const AdRevenuePrecision = {
 } as const;
 export type AdRevenuePrecision = string;
 
+/**
+ * Identifies the integration that emitted an ad event. Reserved for the
+ * official RevenueCat ad-network adapters (for example
+ * `react-native-purchases-admob`); leave it unset when tracking manually.
+ */
+export const AdCaptureMethod = {
+  reactNativeAdMobAdapter: "react_native_admob_adapter",
+} as const;
+export type AdCaptureMethod = string;
+
 export interface AdDisplayedData {
   mediatorName: AdMediatorName;
   adFormat: AdFormat;
@@ -229,6 +239,8 @@ export interface AdDisplayedData {
   impressionId: string;
   networkName?: string | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 export interface AdOpenedData {
@@ -238,6 +250,8 @@ export interface AdOpenedData {
   impressionId: string;
   networkName?: string | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 export interface AdLoadedData {
@@ -247,6 +261,8 @@ export interface AdLoadedData {
   impressionId: string;
   networkName?: string | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 export interface AdRevenueData {
@@ -259,6 +275,8 @@ export interface AdRevenueData {
   precision: AdRevenuePrecision;
   networkName?: string | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 export interface AdFailedToLoadData {
@@ -267,6 +285,19 @@ export interface AdFailedToLoadData {
   adUnitId: string;
   mediatorErrorCode?: number | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
+}
+
+export interface AdRewardEarnedUnverifiedData {
+  mediatorName: AdMediatorName;
+  adFormat: AdFormat;
+  adUnitId: string;
+  impressionId: string;
+  networkName?: string | null;
+  placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 export interface AdRewardPromptShownData {
@@ -349,20 +380,24 @@ export interface RewardedAdTrackingMetadata {
   impressionId: string;
   networkName?: string | null;
   placement?: string | null;
+  /** @internal Reserved for the official RevenueCat ad-network adapters. */
+  captureMethod?: AdCaptureMethod | null;
 }
 
 let debugEventListeners: DebugEventListener[] = [];
 
 eventEmitter?.addListener(
   "Purchases-CustomerInfoUpdated",
-  (customerInfo: CustomerInfo) => {
+  (event: unknown) => {
+    const customerInfo = event as CustomerInfo;
     customerInfoUpdateListeners.forEach((listener) => listener(customerInfo));
   }
 );
 
 eventEmitter?.addListener(
   "Purchases-ShouldPurchasePromoProduct",
-  ({ callbackID }: { callbackID: number }) => {
+  (event: unknown) => {
+    const { callbackID } = event as { callbackID: number };
     shouldPurchasePromoProductListeners.forEach((listener) =>
       listener(() => RNPurchases.makeDeferredPurchase(callbackID))
     );
@@ -371,7 +406,11 @@ eventEmitter?.addListener(
 
 eventEmitter?.addListener(
   "Purchases-LogHandlerEvent",
-  ({ logLevel, message }: { logLevel: LOG_LEVEL; message: string }) => {
+  (event: unknown) => {
+    const { logLevel, message } = event as {
+      logLevel: LOG_LEVEL;
+      message: string;
+    };
     if (customLogHandler) {
       const logLevelEnum = LOG_LEVEL[logLevel];
       customLogHandler(logLevelEnum, message);
@@ -381,14 +420,16 @@ eventEmitter?.addListener(
 
 eventEmitter?.addListener(
   "Purchases-TrackedEvent",
-  (eventDictionary: Record<string, unknown>) => {
+  (event: unknown) => {
+    const eventDictionary = event as Record<string, unknown>;
     trackedEventListeners.forEach((listener) => listener({ eventDictionary }));
   }
 );
 
 eventEmitter?.addListener(
   "Purchases-DebugEvent",
-  (eventDictionary: Record<string, unknown>) => {
+  (event: unknown) => {
+    const eventDictionary = event as Record<string, unknown>;
     debugEventListeners.forEach((listener) => listener({ eventDictionary }));
   }
 );
@@ -517,7 +558,7 @@ export default class Purchases {
    */
   public static PURCHASES_ARE_COMPLETED_BY_TYPE =
     PURCHASES_ARE_COMPLETED_BY_TYPE;
- 
+
   public static UninitializedPurchasesError = UninitializedPurchasesError;
 
   public static UnsupportedPlatformError = UnsupportedPlatformError;
@@ -1120,7 +1161,7 @@ export default class Purchases {
   }
 
   /**
-   * Removes a given TrackedEventListener. 
+   * Removes a given TrackedEventListener.
    * This is a debug API not meant for public use.
    * @internal
    * @param trackedEventListener TrackedEvent listener to remove
@@ -1153,9 +1194,9 @@ export default class Purchases {
       }
     }
   }
-  
+
   /**
-   * Removes a given DebugEventListener. 
+   * Removes a given DebugEventListener.
    * This is a debug API not meant for public use.
    * @internal
    * @param debugEventListener DebugEventListener listener to remove
@@ -2260,6 +2301,11 @@ export class PurchasesAdTracker {
   public async trackAdFailedToLoad(data: AdFailedToLoadData): Promise<void> {
     await throwIfNotConfigured();
     RNPurchases.trackAdFailedToLoad(data);
+  }
+
+  public async trackAdRewardEarnedUnverified(data: AdRewardEarnedUnverifiedData): Promise<void> {
+    await throwIfNotConfigured();
+    RNPurchases.trackAdRewardEarnedUnverified(data);
   }
 
   public async trackRewardedAdPromptShown(data: AdRewardPromptShownData): Promise<void> {
