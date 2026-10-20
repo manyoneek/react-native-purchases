@@ -1,0 +1,146 @@
+[
+  {
+    "name": "sdk-build-before",
+    "cmd": [
+      "corepack",
+      "yarn",
+      "build"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "pods-current",
+    "cmd": [
+      "pod",
+      "update",
+      "PurchasesHybridCommon",
+      "RevenueCat",
+      "RNPurchases",
+      "--repo-update"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "boot",
+    "cmd": [
+      "xcrun",
+      "simctl",
+      "bootstatus",
+      "286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-b"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "build-before",
+    "cmd": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build-for-testing"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "tests-before",
+    "cmd": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+      "CODE_SIGNING_ALLOWED=NO",
+      "test-without-building",
+      "-parallel-testing-enabled",
+      "NO",
+      "-resultBundlePath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/before.xcresult"
+    ],
+    "exit": 65
+  },
+  {
+    "name": "attachments-before",
+    "cmd": [
+      "xcrun",
+      "xcresulttool",
+      "export",
+      "attachments",
+      "--path",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/before.xcresult",
+      "--output-path",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/attachments-before"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "build-fixed",
+    "cmd": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build-for-testing"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "tests-fixed",
+    "cmd": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+      "CODE_SIGNING_ALLOWED=NO",
+      "test-without-building",
+      "-parallel-testing-enabled",
+      "NO",
+      "-resultBundlePath",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/fixed.xcresult"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "attachments-fixed",
+    "cmd": [
+      "xcrun",
+      "xcresulttool",
+      "export",
+      "attachments",
+      "--path",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/fixed.xcresult",
+      "--output-path",
+      "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/current-apps/rn-placement/attachments-fixed"
+    ],
+    "exit": 0
+  }
+]

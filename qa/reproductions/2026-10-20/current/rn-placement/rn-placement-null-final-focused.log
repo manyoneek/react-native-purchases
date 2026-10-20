@@ -1,0 +1,12 @@
+PASS __tests__/placementNullContract.test.js
+  ✓ normalizes absent offering null to null (1 ms)
+  ✓ normalizes absent offering undefined to null (1 ms)
+  ✓ preserves an existing offering
+  ✓ preserves error rejection
+  ✓ rejects an unconfigured request before calling native code
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.139 s, estimated 1 s
+Ran all test suites matching /placementNullContract.test.js/i.

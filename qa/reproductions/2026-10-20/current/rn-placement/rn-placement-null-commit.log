@@ -1,0 +1,4 @@
+8c42d96b Normalize absent placement offerings to null
+ __tests__/qa-contract-boundaries-20261020.test.js | 53 +++++++++++++++++++++++
+ src/purchases.ts                                  |  3 +-
+ 2 files changed, 55 insertions(+), 1 deletion(-)

@@ -1,0 +1,13 @@
+{
+  "id": "RC-RN-20261013-002",
+  "repository": "RevenueCat/react-native-purchases",
+  "commit": "90055537a320046c154e07354baf65545cb64247",
+  "pullRequest": "https://github.com/RevenueCat/react-native-purchases/pull/1607",
+  "mergedDate": "2026-02-27",
+  "firstStableSourceTag": "9.11.0",
+  "classification": "Missing-transaction callback exposed when custom purchase logic was added.",
+  "evidence": "This PR changed the native event builder to omit a nil transaction and added the supported custom-success path. Its unchanged TypeScript declaration still required `storeTransaction`. Historical native/JS boundary execution produces `undefined`, accepts an unguarded typed consumer, and then throws `TypeError`. The required TypeScript declaration dates back to [#887](https://github.com/RevenueCat/react-native-purchases/pull/887) (`a8a84f8d340bddd46c72b137f3dd498601ded7b5`, 2024-02-14), despite an already-optional native delegate contract. Injecting nil into that older implementation throws natively instead of delivering this callback. Thus #887 introduced the type-contract mismatch; #1607 introduced the reported missing-field/custom-purchase case.",
+  "limitations": "Historical method bodies, callback expressions and property types were executed in isolation. The then-pinned iOS 5.59.2 custom-success nil result was source-checked; its complete purchase flow was not rerun.",
+  "investigatedAt": "2026-10-17",
+  "evidenceDirectory": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/history/2026-10-17"
+}

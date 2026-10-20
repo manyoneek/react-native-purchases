@@ -1,0 +1,13 @@
+{
+  "id": "RC-RN-20261013-001",
+  "repository": "RevenueCat/react-native-purchases",
+  "commit": "a8a84f8d340bddd46c72b137f3dd498601ded7b5",
+  "pullRequest": "https://github.com/RevenueCat/react-native-purchases/pull/887",
+  "mergedDate": "2024-02-14",
+  "firstStableSourceTag": "7.21.0",
+  "classification": "Present since embedded paywall callbacks were introduced.",
+  "evidence": "The original native error serializer and React Native callbacks already delivered numeric `10` while the public enum defined `\"10\"`. Historical boundary execution reproduces both purchase and restore mismatches. Presented-paywall callbacks added in [#1958](https://github.com/RevenueCat/react-native-purchases/pull/1958) (`a91582199ff69e7431df9139556fc0057942f1e9`, 2026-10-09; first stable tag `10.13.0`) carried the same unnormalized payload; that later path was checked in source.",
+  "limitations": "Native serializer/methods and actual JavaScript callback expressions executed with framework/dependency shims. No full historical mobile app was run.",
+  "investigatedAt": "2026-10-17",
+  "evidenceDirectory": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/history/2026-10-17"
+}

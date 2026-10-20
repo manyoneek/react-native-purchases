@@ -1,0 +1,38 @@
+PASS __tests__/index.test.js
+PASS __tests__/placementNullContract.test.js
+PASS __tests__/alertHelper.test.ts
+PASS __tests__/nativeModuleNull.test.js
+  ● Console
+
+    console.warn
+      [RevenueCat] isConfigured() returning false: Native module not available
+
+      2071 |             // Native module not available, so SDK cannot be configured
+      2072 |             // tslint:disable-next-line:no-console
+    > 2073 |             console.warn("[RevenueCat] isConfigured() returning false: Native module not available");
+           |                     ^
+      2074 |             return Promise.resolve(false);
+      2075 |         }
+      2076 |         return RNPurchases.isConfigured();
+
+      at Purchases.warn [as isConfigured] (dist/purchases.js:2073:21)
+      at Object.isConfigured (__tests__/nativeModuleNull.test.js:23:36)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+      at node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:7
+      at Object.<anonymous> (node_modules/@babel/runtime/helpers/asyncToGenerator.js:14:12)
+
+PASS __tests__/purchaseSimulatedPackageHelper.test.ts
+PASS __tests__/ApiKeyValidation/ExpoGo.test.js
+PASS __tests__/ApiKeyValidation/RorkSandbox.test.js
+PASS __tests__/offeringsLoader.test.ts
+PASS __tests__/errorNormalization.test.ts
+PASS __tests__/releaseVersionPatterns.test.ts
+PASS __tests__/environment.test.ts
+PASS __tests__/normalizingRejections.test.ts
+
+Test Suites: 12 passed, 12 total
+Tests:       277 passed, 277 total
+Snapshots:   0 total
+Time:        0.448 s, estimated 1 s
+Ran all test suites.

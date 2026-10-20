@@ -1,0 +1,31 @@
+FAIL __tests__/placementNullContract.test.js
+  ✓ normalizes absent offering null to null
+  ✕ normalizes absent offering undefined to null
+  ✓ preserves an existing offering (1 ms)
+  ✓ preserves error rejection
+  ✓ rejects an unconfigured request before calling native code
+
+  ● normalizes absent offering undefined to null
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: null
+    Received: undefined
+
+       9 | test.each([null, undefined])('normalizes absent offering %s to null', async value => {
+      10 |   NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(value);
+    > 11 |   expect(await Purchases.getCurrentOfferingForPlacement('no_offering')).toBe(null);
+         |                                                                         ^
+      12 | });
+      13 |
+      14 | test('preserves an existing offering', async () => {
+
+      at toBe (__tests__/placementNullContract.test.js:11:73)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.487 s
+Ran all test suites matching /placementNullContract.test.js/i.

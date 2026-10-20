@@ -1,0 +1,56 @@
+react-native-purchases-10.15.0.tgz
+npm notice
+npm notice 📦  react-native-purchases@10.15.0
+npm notice Tarball Contents
+npm notice 1.1kB LICENSE
+npm notice 4.3kB README.md
+npm notice 1.1kB RNPurchases.podspec
+npm notice 4.0kB android/build.gradle
+npm notice 144B android/gradle.properties
+npm notice 0B android/settings.gradle
+npm notice 134B android/src/main/AndroidManifest.xml
+npm notice 4.3kB android/src/main/java/com/revenuecat/purchases/react/RNPurchasesConverters.kt
+npm notice 31.2kB android/src/main/java/com/revenuecat/purchases/react/RNPurchasesModule.java
+npm notice 1.0kB android/src/main/java/com/revenuecat/purchases/react/RNPurchasesPackage.java
+npm notice 513B android/src/main/java/com/revenuecat/purchases/react/UpgradeInfo.java
+npm notice 7.8kB dist/browser/nativeModule.d.ts
+npm notice 35.4kB dist/browser/nativeModule.js
+npm notice 409B dist/browser/simulatedstore/alertHelper.d.ts
+npm notice 6.3kB dist/browser/simulatedstore/alertHelper.js
+npm notice 376B dist/browser/simulatedstore/offeringsLoader.d.ts
+npm notice 5.0kB dist/browser/simulatedstore/offeringsLoader.js
+npm notice 217B dist/browser/simulatedstore/purchaseSimulatedPackageHelper.d.ts
+npm notice 6.0kB dist/browser/simulatedstore/purchaseSimulatedPackageHelper.js
+npm notice 1.3kB dist/browser/typeGuards.d.ts
+npm notice 3.0kB dist/browser/typeGuards.js
+npm notice 281B dist/browser/utils.d.ts
+npm notice 856B dist/browser/utils.js
+npm notice 77B dist/customerInfo.d.ts
+npm notice 952B dist/customerInfo.js
+npm notice 71B dist/errors.d.ts
+npm notice 946B dist/errors.js
+npm notice 179B dist/index.d.ts
+npm notice 1.2kB dist/index.js
+npm notice 79B dist/normalizingRejections.d.ts
+npm notice 1.3kB dist/normalizingRejections.js
+npm notice 74B dist/offerings.d.ts
+npm notice 949B dist/offerings.js
+npm notice 66.3kB dist/purchases.d.ts
+npm notice 125.2kB dist/purchases.js
+npm notice 715B dist/utils/environment.d.ts
+npm notice 1.9kB dist/utils/environment.js
+npm notice 241B ios/RNPurchases.h
+npm notice 38.5kB ios/RNPurchases.m
+npm notice 9.2kB ios/RNPurchases.xcodeproj/project.pbxproj
+npm notice 2.6kB ios/strip-frameworks.sh
+npm notice 3.9kB package.json
+npm notice Tarball Details
+npm notice name: react-native-purchases
+npm notice version: 10.15.0
+npm notice filename: react-native-purchases-10.15.0.tgz
+npm notice package size: 64.4 kB
+npm notice unpacked size: 369.2 kB
+npm notice shasum: 162a9a6ed2b83ac885b02958ed3b17f357eea7ae
+npm notice integrity: sha512-iBICN58RKVsU5[...]hsWrQp5XZBQ6A==
+npm notice total files: 42
+npm notice

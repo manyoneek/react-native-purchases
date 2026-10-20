@@ -1,0 +1,4 @@
+cfb106e5 Reject native errors from iOS placement lookup
+ ios/RNPurchases.m                   |  6 +--
+ scripts/placement_error_contract.py | 88 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 91 insertions(+), 3 deletions(-)

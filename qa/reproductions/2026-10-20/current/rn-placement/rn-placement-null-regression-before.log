@@ -1,0 +1,34 @@
+FAIL __tests__/qa-contract-boundaries-20261020.test.js
+  ✓ cached currency absence null becomes strict null (1 ms)
+  ✓ cached currency absence undefined becomes strict null
+  ✓ empty cached currency success is not confused with a cache miss
+  ✓ no-offering null survives the JS wrapper
+  ✓ placement error rejection survives the JS wrapper (1 ms)
+  ✓ a customer-info listener removing itself does not skip the next listener
+  ✓ a promoted-purchase listener removing itself does not skip the next listener
+  ✓ unconfigured placement request rejects before the native call (1 ms)
+  ✕ iOS nil/undefined no-offering result must become documented null
+
+  ● iOS nil/undefined no-offering result must become documented null
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: null
+    Received: undefined
+
+      50 | test('iOS nil/undefined no-offering result must become documented null', async () => {
+      51 |   NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(undefined);
+    > 52 |   expect(await Purchases.getCurrentOfferingForPlacement('sdk_bug_reporter_none_20261018')).toBe(null);
+         |                                                                                            ^
+      53 | });
+      54 |
+
+      at Object.toBe (__tests__/qa-contract-boundaries-20261020.test.js:52:92)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 passed, 9 total
+Snapshots:   0 total
+Time:        1.505 s
+Ran all test suites matching /qa-contract-boundaries-20261020.test.js/i.

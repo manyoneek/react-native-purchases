@@ -1,0 +1,77 @@
+Found 2 modules for target `RCBugReporter`
+link_native_modules! {ios_packages: [{configurations: [], name: "react-native-purchases", root: "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/node_modules/react-native-purchases", path: "../node_modules/react-native-purchases", podspec_path: "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/node_modules/react-native-purchases/RNPurchases.podspec", script_phases: []}, {configurations: [], name: "react-native-safe-area-context", root: "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/node_modules/react-native-safe-area-context", path: "../node_modules/react-native-safe-area-context", podspec_path: "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec", script_phases: []}], ios_project_root_path: "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios", react_native_path: "../node_modules/react-native"}
+Auto-linking React Native modules for target `RCBugReporter`: RNPurchases and react-native-safe-area-context
+Framework build type is static library
+[ReactNativeDependencies] Setting up ReactNativeDependencies...
+[ReactNativeDependencies] Building from source: false
+[ReactNativeDependencies] Using tarball from URL: https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.87.1/react-native-artifacts-0.87.1-reactnative-dependencies-debug.tar.gz
+[ReactNativeDependencies] Tarball reactnative-dependencies-0.87.1-debug.tar.gz already exists in Pods. Skipping download.
+[ReactNativeDependencies] Tarball reactnative-dependencies-0.87.1-release.tar.gz already exists in Pods. Skipping download.
+[ReactNativeDependencies] Source: {http: "https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.87.1/react-native-artifacts-0.87.1-reactnative-dependencies-debug.tar.gz"}
+[ReactNativeCore] Setting up ReactNativeCore...
+[ReactNativeCore] Building from source: false
+Configuring the target with the New Architecture
+[ReactNativeCore] Using React Native Core and React Native Dependencies prebuilt versions.
+[36m[1m[Codegen][0m Analyzing <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/package.json[0m
+[36m[1m[Codegen][0m [33mSearching for codegen-enabled libraries in the app.[0m
+[36m[1m[Codegen][0m [33mThe "codegenConfig" field is not defined in package.json. Assuming there is nothing to generate at the app level.[0m
+[36m[1m[Codegen][0m [33mSearching for codegen-enabled libraries in react-native.config.js[0m
+[36m[1m[Codegen][0m Found react-native-safe-area-context[0m
+[36m[1m[Codegen][0m Processing safeareacontext[0m
+[36m[1m[Codegen][0m [33mSearching for podspec in the project dependencies.[0m
+[36m[1m[Codegen][0m Supported Apple platforms: ios, macos, tvos, visionos for safeareacontext[0m
+[36m[1m[Codegen][0m Generating Native Code for safeareacontext - ios[0m
+[36m[1m[Codegen][0m Generated artifacts: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen[0m
+[36m[1m[Codegen][0m Generating RCTThirdPartyComponentsProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen/RCTThirdPartyComponentsProvider.h[0m
+[36m[1m[Codegen][0m Generating RCTThirdPartyComponentsProvider.mm[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen/RCTThirdPartyComponentsProvider.mm[0m
+[36m[1m[Codegen][0m Generating RCTModulesProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen/RCTModuleProviders.h[0m
+[36m[1m[Codegen][0m Generating RCTModuleProviders.mm[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen/RCTModuleProviders.mm[0m
+[36m[1m[Codegen][0m Generating RCTAppDependencyProvider[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactAppDependencyProvider/RCTAppDependencyProvider.h[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactAppDependencyProvider/RCTAppDependencyProvider.mm[0m
+[36m[1m[Codegen][0m Generated podspec: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactAppDependencyProvider/ReactAppDependencyProvider.podspec[0m
+[36m[1m[Codegen][0m Generated podspec: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/ReactCodegen/ReactCodegen.podspec[0m
+[36m[1m[Codegen][0m Generating Package.swift[0m
+[36m[1m[Codegen][0m Generated artifact: <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/build/generated/ios/Package.swift[0m
+[36m[1m[Codegen][0m [33mDone.[0m
+[ReactNativeDependencies] Using tarball from URL: https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.87.1/react-native-artifacts-0.87.1-reactnative-dependencies-debug.tar.gz
+[ReactNativeDependencies] Tarball reactnative-dependencies-0.87.1-debug.tar.gz already exists in Pods. Skipping download.
+[ReactNativeDependencies] Tarball reactnative-dependencies-0.87.1-release.tar.gz already exists in Pods. Skipping download.
+Updating local specs repositories
+Analyzing dependencies
+Downloading dependencies
+Installing PurchasesHybridCommon 19.14.0 (was 19.12.0)
+Installing RNPurchases 10.15.0
+Installing RevenueCat 5.96.0 (was 5.95.0)
+Generating Pods project
+Setting USE_HERMES build settings
+Setting REACT_NATIVE_PATH build settings
+Setting SWIFT_ACTIVE_COMPILATION_CONDITIONS build settings
+[Ccache]: Removing Ccache from CC, LD, CXX & LDPLUSPLUS build settings
+[ReactNativeCore] Configuring xcconfig for prebuilt React Native Core...
+[ReactNativeCore] Prebuilt xcconfig configuration complete
+[ReactNativeDependencies] Configuring xcconfig for prebuilt React Native Dependencies...
+[ReactNativeDependencies] Prebuilt deps xcconfig configuration complete
+[SPM] Cleaning old SPM dependencies from Pods project
+[SPM] Adding SPM dependencies to Pods project
+[Privacy Manifest Aggregation] Appending aggregated reasons to existing PrivacyInfo.xcprivacy file.
+[Privacy Manifest Aggregation] Reading .xcprivacy files to aggregate all used Required Reason APIs.
+Setting CLANG_CXX_LANGUAGE_STANDARD to c++20 on <local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/app/ios/RCBugReporter.xcodeproj
+
+==================== DEPRECATION NOTICE =====================
+Calling `pod install` directly is deprecated in React Native
+because we are moving away from Cocoapods toward alternative
+solutions to build the project.
+* If you are using Expo, please run:
+`npx expo run:ios`
+* If you are using the Community CLI, please run:
+`yarn ios`
+=============================================================
+
+Pod install took 23 [s] to run
+Integrating client project
+Pod installation complete! There are 88 dependencies from the Podfile and 89 total pods installed.

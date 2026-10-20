@@ -1,0 +1,6 @@
+{
+  "upstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+  "before": 65,
+  "fixed": 0,
+  "dependencies": "Podfile.lock"
+}

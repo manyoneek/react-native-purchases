@@ -1,0 +1,15 @@
+ℹ Building target commonjs
+ℹ Cleaning up previous build at lib/commonjs
+ℹ Compiling 5 files in src with babel
+Browserslist: browsers data (caniuse-lite) is 20 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✔ Wrote files to lib/commonjs
+ℹ Building target module
+ℹ Cleaning up previous build at lib/module
+ℹ Compiling 5 files in src with babel
+✔ Wrote files to lib/module
+ℹ Building target typescript
+ℹ Cleaning up previous build at lib/typescript
+ℹ Generating type definitions with tsc
+✔ Wrote definition files to lib/typescript
