@@ -1,0 +1,24 @@
+[
+  {
+    "label": "regression-before",
+    "command": [
+      "python3",
+      "scripts/placement_error_contract.py"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-error",
+    "exit": 1,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-error-regression-before.log",
+    "seconds": 2.66
+  },
+  {
+    "label": "regression-after",
+    "command": [
+      "python3",
+      "scripts/placement_error_contract.py"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-error",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-error-regression-after.log",
+    "seconds": 0.9
+  }
+]

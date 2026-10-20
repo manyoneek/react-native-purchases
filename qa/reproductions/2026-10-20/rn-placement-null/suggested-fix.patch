@@ -1,0 +1,73 @@
+diff --git a/__tests__/qa-contract-boundaries-20261020.test.js b/__tests__/qa-contract-boundaries-20261020.test.js
+new file mode 100644
+index 00000000..d29a5729
+--- /dev/null
++++ b/__tests__/qa-contract-boundaries-20261020.test.js
+@@ -0,0 +1,53 @@
++import {NativeModules, NativeEventEmitter} from 'react-native';
++import Purchases from '../src/purchases';
++// These are JS/public-method tests with mocked native transport, not app evidence.
++beforeEach(() => { jest.clearAllMocks(); NativeModules.RNPurchases.isConfigured.mockResolvedValue(true); });
++test.each([null, undefined])('cached currency absence %s becomes strict null', async value => {
++  NativeModules.RNPurchases.getCachedVirtualCurrencies.mockResolvedValueOnce(value);
++  expect(await Purchases.getCachedVirtualCurrencies()).toBe(null);
++});
++test('empty cached currency success is not confused with a cache miss', async () => {
++  const result = {all: {}};
++  NativeModules.RNPurchases.getCachedVirtualCurrencies.mockResolvedValueOnce(result);
++  expect(await Purchases.getCachedVirtualCurrencies()).toBe(result);
++});
++test('no-offering null survives the JS wrapper', async () => {
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(null);
++  expect(await Purchases.getCurrentOfferingForPlacement('qa_no_offering')).toBe(null);
++});
++test('placement error rejection survives the JS wrapper', async () => {
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockRejectedValueOnce(Object.assign(new Error('offline'), {code:'10',userInfo:{readableErrorCode:'NetworkError',underlyingErrorMessage:'connection refused'}}));
++  await expect(Purchases.getCurrentOfferingForPlacement('qa')).rejects.toMatchObject({code:'10',readableErrorCode:'NetworkError',underlyingErrorMessage:'connection refused',userCancelled:false});
++});
++test('a customer-info listener removing itself does not skip the next listener', () => {
++  const emitter = new NativeEventEmitter(NativeModules.RNPurchases);
++  const first = jest.fn(() => Purchases.removeCustomerInfoUpdateListener(first));
++  const second = jest.fn();
++  Purchases.addCustomerInfoUpdateListener(first); Purchases.addCustomerInfoUpdateListener(second);
++  try {
++    emitter.emit('Purchases-CustomerInfoUpdated',global.customerInfoStub);
++    emitter.emit('Purchases-CustomerInfoUpdated',global.customerInfoStub);
++    expect(first).toHaveBeenCalledTimes(1); expect(second).toHaveBeenCalledTimes(2);
++  } finally { Purchases.removeCustomerInfoUpdateListener(first); Purchases.removeCustomerInfoUpdateListener(second); }
++});
++test('a promoted-purchase listener removing itself does not skip the next listener', () => {
++  const emitter = new NativeEventEmitter(NativeModules.RNPurchases);
++  const first = jest.fn(() => Purchases.removeShouldPurchasePromoProductListener(first));
++  const second = jest.fn();
++  Purchases.addShouldPurchasePromoProductListener(first); Purchases.addShouldPurchasePromoProductListener(second);
++  try {
++    emitter.emit('Purchases-ShouldPurchasePromoProduct',{callbackID:1});
++    emitter.emit('Purchases-ShouldPurchasePromoProduct',{callbackID:1});
++    expect(first).toHaveBeenCalledTimes(1); expect(second).toHaveBeenCalledTimes(2);
++  } finally { Purchases.removeShouldPurchasePromoProductListener(first); Purchases.removeShouldPurchasePromoProductListener(second); }
++});
++test('unconfigured placement request rejects before the native call', async () => {
++  NativeModules.RNPurchases.isConfigured.mockResolvedValueOnce(false);
++  await expect(Purchases.getCurrentOfferingForPlacement('qa')).rejects.toBeInstanceOf(Error);
++  expect(NativeModules.RNPurchases.getCurrentOfferingForPlacement).not.toHaveBeenCalled();
++});
++
++test('iOS nil/undefined no-offering result must become documented null', async () => {
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(undefined);
++  expect(await Purchases.getCurrentOfferingForPlacement('sdk_bug_reporter_none_20261018')).toBe(null);
++});
+diff --git a/src/purchases.ts b/src/purchases.ts
+index 25392e08..2a3a2f09 100644
+--- a/src/purchases.ts
++++ b/src/purchases.ts
+@@ -817,7 +817,8 @@ export default class Purchases {
+     placementIdentifier: string
+   ): Promise<PurchasesOffering | null> {
+     await throwIfNotConfigured();
+-    return RNPurchases.getCurrentOfferingForPlacement(placementIdentifier);
++    const offering = await RNPurchases.getCurrentOfferingForPlacement(placementIdentifier);
++    return offering ?? null;
+   }
+ 
+   /**

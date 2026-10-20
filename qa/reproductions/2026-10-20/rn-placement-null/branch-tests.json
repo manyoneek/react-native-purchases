@@ -1,0 +1,92 @@
+[
+  {
+    "label": "install",
+    "command": [
+      "corepack",
+      "yarn",
+      "install",
+      "--immutable"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-install.log",
+    "seconds": 26.34
+  },
+  {
+    "label": "build",
+    "command": [
+      "corepack",
+      "yarn",
+      "build"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-build.log",
+    "seconds": 0.95
+  },
+  {
+    "label": "before-build",
+    "command": [
+      "corepack",
+      "yarn",
+      "build"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-before-build.log",
+    "seconds": 0.84
+  },
+  {
+    "label": "regression-before",
+    "command": [
+      "corepack",
+      "yarn",
+      "test",
+      "--runInBand",
+      "qa-contract-boundaries-20261020.test.js"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 1,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-regression-before.log",
+    "seconds": 3.9
+  },
+  {
+    "label": "after-build",
+    "command": [
+      "corepack",
+      "yarn",
+      "build"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-after-build.log",
+    "seconds": 0.83
+  },
+  {
+    "label": "regression-after",
+    "command": [
+      "corepack",
+      "yarn",
+      "test",
+      "--runInBand",
+      "qa-contract-boundaries-20261020.test.js"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-regression-after.log",
+    "seconds": 2.18
+  },
+  {
+    "label": "full-after",
+    "command": [
+      "corepack",
+      "yarn",
+      "test",
+      "--runInBand"
+    ],
+    "cwd": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/rn-placement-null",
+    "exit": 0,
+    "log": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/publication/2026-10-20/logs/rn-placement-null-full-after.log",
+    "seconds": 2.79
+  }
+]

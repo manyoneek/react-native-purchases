@@ -1,0 +1,16 @@
+PASS __tests__/qa-contract-boundaries-20261020.test.js
+  ✓ cached currency absence null becomes strict null
+  ✓ cached currency absence undefined becomes strict null
+  ✓ empty cached currency success is not confused with a cache miss
+  ✓ no-offering null survives the JS wrapper
+  ✓ placement error rejection survives the JS wrapper (1 ms)
+  ✓ a customer-info listener removing itself does not skip the next listener
+  ✓ a promoted-purchase listener removing itself does not skip the next listener
+  ✓ unconfigured placement request rejects before the native call
+  ✓ iOS nil/undefined no-offering result must become documented null
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        0.392 s, estimated 2 s
+Ran all test suites matching /qa-contract-boundaries-20261020.test.js/i.

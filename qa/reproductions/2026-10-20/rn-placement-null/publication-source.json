@@ -1,0 +1,6 @@
+{
+  "base": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+  "head": "8c42d96bf5bd7e25354cdcf2bb47ebb1da515623",
+  "branch": "fix/null-placement-offering",
+  "freshFullAppRun": false
+}

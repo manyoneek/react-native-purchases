@@ -1,0 +1,20 @@
+{
+  "commit": "a3d1f06386a6726a83c9cc89372b885a157c16ed",
+  "parentCommit": "31e77d1c5b25a95089b350db69788c5ae18a5e36",
+  "pullRequest": "https://github.com/RevenueCat/react-native-purchases/pull/938",
+  "mergedDate": "2024-03-13",
+  "featureCommit": "91c21caea7228a4bf8cd8682d0dd5141618f11bd",
+  "featureParentCommit": "a80e82f5ddafc1dca2aa1fc68cad869833b86972",
+  "featurePullRequest": "https://github.com/RevenueCat/react-native-purchases/pull/925",
+  "featureAuthoredDate": "2024-03-01",
+  "featureCommittedDate": "2024-03-11",
+  "firstStableSourceTag": "7.24.0",
+  "firstReleasePublishedAt": "2024-03-14T17:48:59Z",
+  "classification": "Present since placement support was introduced; both parents lack the method.",
+  "investigatedAt": "2026-10-20",
+  "evidenceDirectory": "<local-user>/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/history",
+  "id": "RC-RN-20261020-002",
+  "repository": "RevenueCat/react-native-purchases",
+  "evidence": "Introducing TS methods already declare PurchasesOffering | null and return native output unchanged. Actual React Native 0.73.5 resolve block produces empty callback args for nil and [null] for NSNull. Historical RevenueCat method execution returns undefined for the former and null for the latter; registry package hash verified.",
+  "limitations": "Host Objective-C serializer and actual TS-method execution with dependency/transport shims. React Native 0.73.5 is the introducing default-branch revision dev pin. No full historical app or assertion across all supported React Native versions."
+}
