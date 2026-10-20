@@ -10,6 +10,7 @@ import {
   type ViewStyle,
 } from "react-native";
 import {
+  normalizePurchasesError,
   type CustomerInfo,
   type PaywallInteractionEvent,
   PAYWALL_RESULT, type PurchasesError,
@@ -219,11 +220,11 @@ const InternalPaywall: React.FC<FullScreenPaywallViewProps> = ({
         options={{ ...transformedOptions, ...nativeOptions }}
         onPurchaseStarted={(event: any) => onPurchaseStarted && onPurchaseStarted(event.nativeEvent)}
         onPurchaseCompleted={(event: any) => onPurchaseCompleted && onPurchaseCompleted(event.nativeEvent)}
-        onPurchaseError={(event: any) => onPurchaseError && onPurchaseError(event.nativeEvent)}
+        onPurchaseError={(event: any) => onPurchaseError && onPurchaseError({ ...event.nativeEvent, error: normalizePurchasesError(event.nativeEvent.error) })}
         onPurchaseCancelled={() => onPurchaseCancelled && onPurchaseCancelled()}
         onRestoreStarted={() => onRestoreStarted && onRestoreStarted()}
         onRestoreCompleted={(event: any) => onRestoreCompleted && onRestoreCompleted(event.nativeEvent)}
-        onRestoreError={(event: any) => onRestoreError && onRestoreError(event.nativeEvent)}
+        onRestoreError={(event: any) => onRestoreError && onRestoreError({ ...event.nativeEvent, error: normalizePurchasesError(event.nativeEvent.error) })}
         onDismiss={() => onDismiss && onDismiss()}
         onPurchasePackageInitiated={(event: any) => {
           const { packageBeingPurchased, requestId } = event.nativeEvent;
@@ -293,11 +294,11 @@ const InternalPaywallFooterView: React.FC<InternalFooterPaywallViewProps> = ({
         options={transformedOptions}
         onPurchaseStarted={(event: any) => onPurchaseStarted && onPurchaseStarted(event.nativeEvent)}
         onPurchaseCompleted={(event: any) => onPurchaseCompleted && onPurchaseCompleted(event.nativeEvent)}
-        onPurchaseError={(event: any) => onPurchaseError && onPurchaseError(event.nativeEvent)}
+        onPurchaseError={(event: any) => onPurchaseError && onPurchaseError({ ...event.nativeEvent, error: normalizePurchasesError(event.nativeEvent.error) })}
         onPurchaseCancelled={() => onPurchaseCancelled && onPurchaseCancelled()}
         onRestoreStarted={() => onRestoreStarted && onRestoreStarted()}
         onRestoreCompleted={(event: any) => onRestoreCompleted && onRestoreCompleted(event.nativeEvent)}
-        onRestoreError={(event: any) => onRestoreError && onRestoreError(event.nativeEvent)}
+        onRestoreError={(event: any) => onRestoreError && onRestoreError({ ...event.nativeEvent, error: normalizePurchasesError(event.nativeEvent.error) })}
         onDismiss={() => onDismiss && onDismiss()}
         onMeasure={onMeasure}
       />
@@ -664,11 +665,11 @@ export default class RevenueCatUI {
     const handlers: Record<keyof PaywallCallbacks, (event: any) => void> = {
       onPurchaseStarted: (event) => callbacks.onPurchaseStarted?.(event),
       onPurchaseCompleted: (event) => callbacks.onPurchaseCompleted?.(event),
-      onPurchaseError: (event) => callbacks.onPurchaseError?.(event),
+      onPurchaseError: (event) => callbacks.onPurchaseError?.({ ...event, error: normalizePurchasesError(event.error) }),
       onPurchaseCancelled: () => callbacks.onPurchaseCancelled?.(),
       onRestoreStarted: () => callbacks.onRestoreStarted?.(),
       onRestoreCompleted: (event) => callbacks.onRestoreCompleted?.(event),
-      onRestoreError: (event) => callbacks.onRestoreError?.(event),
+      onRestoreError: (event) => callbacks.onRestoreError?.({ ...event, error: normalizePurchasesError(event.error) }),
       onPurchasePackageInitiated: ({ packageBeingPurchased, requestId }) =>
         callbacks.onPurchasePackageInitiated?.({
           packageBeingPurchased,
