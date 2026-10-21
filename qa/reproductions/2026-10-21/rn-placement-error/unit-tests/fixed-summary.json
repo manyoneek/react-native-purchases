@@ -1,0 +1,30 @@
+{
+  "passed": 6,
+  "failed": 0,
+  "tests": [
+    [
+      "-[RNPurchasesPlacementTests testRejectsBlockedEndpointError]",
+      "passed"
+    ],
+    [
+      "-[RNPurchasesPlacementTests testRejectsConfigurationError]",
+      "passed"
+    ],
+    [
+      "-[RNPurchasesPlacementTests testRejectsInvalidCredentialsError]",
+      "passed"
+    ],
+    [
+      "-[RNPurchasesPlacementTests testResolvesAbsentOffering]",
+      "passed"
+    ],
+    [
+      "-[RNPurchasesPlacementTests testResolvesEmptyOfferingDictionary]",
+      "passed"
+    ],
+    [
+      "-[RNPurchasesPlacementTests testResolvesOffering]",
+      "passed"
+    ]
+  ]
+}

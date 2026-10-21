@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "before",
+    "exit": 65,
+    "expected": 65,
+    "command": [
+      "xcodebuild",
+      "test",
+      "-workspace",
+      "examples/purchaseTesterTypescript/ios/PurchaseTester.xcworkspace",
+      "-scheme",
+      "RNPurchases-Unit-UnitTests",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-configuration",
+      "Release",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/unit-tests/DerivedData",
+      "-resultBundlePath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/unit-tests/before.xcresult",
+      "-parallel-testing-enabled",
+      "NO",
+      "CODE_SIGNING_ALLOWED=NO"
+    ]
+  },
+  {
+    "stage": "fixed",
+    "exit": 0,
+    "expected": 0,
+    "command": [
+      "xcodebuild",
+      "test",
+      "-workspace",
+      "examples/purchaseTesterTypescript/ios/PurchaseTester.xcworkspace",
+      "-scheme",
+      "RNPurchases-Unit-UnitTests",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-configuration",
+      "Release",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/unit-tests/DerivedData",
+      "-resultBundlePath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/unit-tests/fixed.xcresult",
+      "-parallel-testing-enabled",
+      "NO",
+      "CODE_SIGNING_ALLOWED=NO"
+    ]
+  }
+]
