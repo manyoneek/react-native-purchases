@@ -1,0 +1,192 @@
+{
+  "upstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+  "fix": "0dddfd7f73e0dae0fbe445bf8b48e1526ce06c69",
+  "onlyFix": "ios placement error propagation",
+  "commands": [
+    {
+      "name": "sdk-build",
+      "command": [
+        "corepack",
+        "yarn",
+        "build"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "regression-before",
+      "command": [
+        "python3",
+        "scripts/placement_error_contract.py",
+        "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+        "before"
+      ],
+      "exit": 1,
+      "expected": 1
+    },
+    {
+      "name": "regression-fixed",
+      "command": [
+        "python3",
+        "scripts/placement_error_contract.py"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "core-tests",
+      "command": [
+        "corepack",
+        "yarn",
+        "test",
+        "--runInBand"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "corepack",
+        "yarn",
+        "typecheck"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "boot",
+      "command": [
+        "xcrun",
+        "simctl",
+        "bootstatus",
+        "286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "-b"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "app-build-before",
+      "command": [
+        "xcodebuild",
+        "-workspace",
+        "ios/RCBugReporter.xcworkspace",
+        "-scheme",
+        "QAReproduction",
+        "-configuration",
+        "Debug",
+        "-destination",
+        "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "-derivedDataPath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+        "CODE_SIGNING_ALLOWED=NO",
+        "build-for-testing"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "app-tests-before",
+      "command": [
+        "xcodebuild",
+        "-workspace",
+        "ios/RCBugReporter.xcworkspace",
+        "-scheme",
+        "QAReproduction",
+        "-configuration",
+        "Debug",
+        "-destination",
+        "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "-derivedDataPath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+        "CODE_SIGNING_ALLOWED=NO",
+        "test-without-building",
+        "-parallel-testing-enabled",
+        "NO",
+        "-only-testing:RCBugReporterUITests/ReproductionTests/testNetworkError",
+        "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl",
+        "-resultBundlePath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/before.xcresult"
+      ],
+      "exit": 65,
+      "expected": 65
+    },
+    {
+      "name": "attachments-before",
+      "command": [
+        "xcrun",
+        "xcresulttool",
+        "export",
+        "attachments",
+        "--path",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/before.xcresult",
+        "--output-path",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/attachments-before"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "app-build-fixed",
+      "command": [
+        "xcodebuild",
+        "-workspace",
+        "ios/RCBugReporter.xcworkspace",
+        "-scheme",
+        "QAReproduction",
+        "-configuration",
+        "Debug",
+        "-destination",
+        "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "-derivedDataPath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+        "CODE_SIGNING_ALLOWED=NO",
+        "build-for-testing"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "app-tests-fixed",
+      "command": [
+        "xcodebuild",
+        "-workspace",
+        "ios/RCBugReporter.xcworkspace",
+        "-scheme",
+        "QAReproduction",
+        "-configuration",
+        "Debug",
+        "-destination",
+        "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "-derivedDataPath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-20/derived-app",
+        "CODE_SIGNING_ALLOWED=NO",
+        "test-without-building",
+        "-parallel-testing-enabled",
+        "NO",
+        "-only-testing:RCBugReporterUITests/ReproductionTests/testNetworkError",
+        "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl",
+        "-resultBundlePath",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/fixed.xcresult"
+      ],
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "name": "attachments-fixed",
+      "command": [
+        "xcrun",
+        "xcresulttool",
+        "export",
+        "attachments",
+        "--path",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/fixed.xcresult",
+        "--output-path",
+        "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/upstream-migration/2026-10-21/rn-placement-error/attachments-fixed"
+      ],
+      "exit": 0,
+      "expected": 0
+    }
+  ]
+}

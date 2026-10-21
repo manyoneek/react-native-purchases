@@ -1,0 +1,54 @@
+[
+  {
+    "rejectCalls" : 0,
+    "case" : "network-error",
+    "passed" : false,
+    "resolveCalls" : 1,
+    "value" : null,
+    "code" : null
+  },
+  {
+    "rejectCalls" : 0,
+    "case" : "configuration-error",
+    "passed" : false,
+    "resolveCalls" : 1,
+    "value" : null,
+    "code" : null
+  },
+  {
+    "rejectCalls" : 0,
+    "case" : "invalid-credentials",
+    "passed" : false,
+    "resolveCalls" : 1,
+    "value" : null,
+    "code" : null
+  },
+  {
+    "rejectCalls" : 0,
+    "case" : "no-offering",
+    "passed" : true,
+    "resolveCalls" : 1,
+    "value" : null,
+    "code" : null
+  },
+  {
+    "rejectCalls" : 0,
+    "case" : "empty-dictionary-control",
+    "passed" : true,
+    "resolveCalls" : 1,
+    "value" : {
+
+    },
+    "code" : null
+  },
+  {
+    "rejectCalls" : 0,
+    "case" : "present-offering",
+    "passed" : true,
+    "resolveCalls" : 1,
+    "value" : {
+      "identifier" : "default"
+    },
+    "code" : null
+  }
+]
