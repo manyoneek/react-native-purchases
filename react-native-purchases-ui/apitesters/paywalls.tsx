@@ -42,7 +42,7 @@ const paywallComponentProps: PaywallComponentProps = {
   },
   onPurchaseCompleted: ({ customerInfo, storeTransaction }) => {
     const info: CustomerInfo = customerInfo;
-    const transaction: PurchasesStoreTransaction = storeTransaction;
+    const transaction: PurchasesStoreTransaction | undefined = storeTransaction;
     void info;
     void transaction;
   },
@@ -86,7 +86,7 @@ const footerComponentProps: FooterComponentProps = {
   },
   onPurchaseCompleted: ({ customerInfo, storeTransaction }) => {
     const info: CustomerInfo = customerInfo;
-    const transaction: PurchasesStoreTransaction = storeTransaction;
+    const transaction: PurchasesStoreTransaction | undefined = storeTransaction;
     void info;
     void transaction;
   },
@@ -124,7 +124,7 @@ const deprecatedFooterComponentProps: DeprecatedFooterComponentProps = {
   },
   onPurchaseCompleted: ({ customerInfo, storeTransaction }) => {
     const info: CustomerInfo = customerInfo;
-    const transaction: PurchasesStoreTransaction = storeTransaction;
+    const transaction: PurchasesStoreTransaction | undefined = storeTransaction;
     void info;
     void transaction;
   },
@@ -234,7 +234,7 @@ const paywallCallbacks: PaywallCallbacks = {
   },
   onPurchaseCompleted: ({ customerInfo, storeTransaction }) => {
     const info: CustomerInfo = customerInfo;
-    const transaction: PurchasesStoreTransaction = storeTransaction;
+    const transaction: PurchasesStoreTransaction | undefined = storeTransaction;
     void info;
     void transaction;
   },
@@ -340,10 +340,10 @@ const onPurchaseCompleted = ({
   storeTransaction,
 }: {
   customerInfo: CustomerInfo;
-  storeTransaction: PurchasesStoreTransaction;
+  storeTransaction?: PurchasesStoreTransaction;
 }) => {
   const info: CustomerInfo = customerInfo;
-  const transaction: PurchasesStoreTransaction = storeTransaction;
+  const transaction: PurchasesStoreTransaction | undefined = storeTransaction;
   void info;
   void transaction;
 };

@@ -429,7 +429,7 @@ export interface PaywallCallbacks {
   onPurchaseCompleted?: ({
                            customerInfo,
                            storeTransaction
-                         }: { customerInfo: CustomerInfo, storeTransaction: PurchasesStoreTransaction }) => void;
+                         }: { customerInfo: CustomerInfo, storeTransaction?: PurchasesStoreTransaction }) => void;
   onPurchaseError?: ({error}: { error: PurchasesError }) => void;
   onPurchaseCancelled?: () => void;
   onRestoreStarted?: () => void;
@@ -465,7 +465,7 @@ type FooterPaywallViewProps = {
   onPurchaseCompleted?: ({
                            customerInfo,
                            storeTransaction
-                         }: { customerInfo: CustomerInfo, storeTransaction: PurchasesStoreTransaction }) => void;
+                         }: { customerInfo: CustomerInfo, storeTransaction?: PurchasesStoreTransaction }) => void;
   onPurchaseError?: ({error}: { error: PurchasesError }) => void;
   onPurchaseCancelled?: () => void;
   onRestoreStarted?: () => void;

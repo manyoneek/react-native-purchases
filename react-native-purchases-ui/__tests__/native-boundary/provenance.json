@@ -1,0 +1,8 @@
+{
+  "reactNativeCommit": "dffdb082054c9d9d71287e72a6565c422485a3d8",
+  "hybridCommonTag": "19.11.0",
+  "hybridCommonCommit": "cd64a365030e0b354a47da099b11edfd6d43fa3d",
+  "errorContainerSHA256": "cbedbaaa0d583da4e4408097aa3ecc7c4b78653c4d3fe5faf963dea063e737bf",
+  "eventForwarderSHA256": "d5a627a3d3bfa8b18663762350c03612fd1d94fddeae2b48f5585be67d4103cd",
+  "limitations": "macOS Foundation host execution; declaration-only SDK/UI shims; no UIKit, React Native runtime, StoreKit or service execution"
+}
