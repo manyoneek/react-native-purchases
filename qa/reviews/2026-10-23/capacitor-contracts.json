@@ -1,0 +1,13 @@
+{
+  "command": [
+    "npm",
+    "test",
+    "--",
+    "--runInBand"
+  ],
+  "cwd": "runs/2026-10-23/worktrees/purchases-capacitor",
+  "exit": 0,
+  "timedOut": false,
+  "seconds": 1.16,
+  "log": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-23/logs/capacitor-contracts.log"
+}

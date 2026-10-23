@@ -1,0 +1,14 @@
+
+> @revenuecat/purchases-capacitor@13.7.6 test
+> jest --runInBand
+
+PASS __tests__/proxyContracts.test.ts
+PASS __tests__/errorNormalization.test.ts
+PASS __tests__/paywallErrorCallbacks.test.ts
+PASS __tests__/capacitorParity.test.ts
+
+Test Suites: 4 passed, 4 total
+Tests:       28 passed, 28 total
+Snapshots:   0 total
+Time:        0.637 s, estimated 1 s
+Ran all test suites.

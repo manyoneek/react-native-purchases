@@ -1,0 +1,465 @@
+[
+  {
+    "id": "RC-RN-20261013-001",
+    "repository": "RevenueCat/react-native-purchases",
+    "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+    "previousAppUpstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/issues/1",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-10-21T13:36:18Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/pull/2",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:20:57Z",
+        "headSha": "396d4dc06dad83a7f320bbbf6a14b50aba074aa1"
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/pull/2048",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2026-10-22T10:43:01Z",
+        "headSha": "b924769b3f2d052a4d03dea4728b4bd07ac4a4d6"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:22.395435+00:00"
+  },
+  {
+    "id": "RC-RN-20261013-002",
+    "repository": "RevenueCat/react-native-purchases",
+    "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+    "previousAppUpstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/issues/3",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:57Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/pull/4",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:24:02Z",
+        "headSha": "9be0efd5e3b4ed3d07298a879199a2f32a6b9aae"
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/1498",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-03-26T00:21:02Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/674",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2023-06-28T05:19:49Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/991",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2024-07-10T12:56:22Z",
+        "headSha": null
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:23.808777+00:00"
+  },
+  {
+    "id": "RC-FLUTTER-20261014-001",
+    "repository": "RevenueCat/purchases-flutter",
+    "upstream": "02fc034882aa0627b9fac0acb70d53870c850aa5",
+    "previousAppUpstream": "1d7bfb424e4596d638c9ac0a53e1ce3e18db16af",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/purchases-flutter/issues/1",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-10-21T09:13:21Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/purchases-flutter/pull/2",
+        "state": "closed",
+        "merged": false,
+        "updatedAt": "2026-10-21T09:13:23Z",
+        "headSha": "f944f942ad052fd51cdbab8346520b82331472e9"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-flutter/issues/1970",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-21T05:12:56Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-flutter/pull/1972",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2026-10-20T10:17:19Z",
+        "headSha": "644cdee548facc57023f7d6f958da96b1c5e229c"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:22.953558+00:00"
+  },
+  {
+    "id": "RC-FLUTTER-20261014-002",
+    "repository": "RevenueCat/purchases-flutter",
+    "upstream": "02fc034882aa0627b9fac0acb70d53870c850aa5",
+    "previousAppUpstream": "1d7bfb424e4596d638c9ac0a53e1ce3e18db16af",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/purchases-flutter/issues/3",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-21T09:17:32Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/purchases-flutter/pull/4",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-21T09:17:30Z",
+        "headSha": "84c390be27729e0d582672d67288863ceb7c0cf9"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-flutter/pull/1413",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2025-07-28T09:46:43Z",
+        "headSha": "35550047fb43d4042a061b3edfafcac49f631fd6"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-flutter/issues/206",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2021-07-03T00:07:14Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-flutter/issues/383",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-03-27T00:31:59Z",
+        "headSha": null
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:23.718615+00:00"
+  },
+  {
+    "id": "RC-CORDOVA-20261015-001",
+    "repository": "RevenueCat/cordova-plugin-purchases",
+    "upstream": "de5de0fb0e019d882f39b3f3124b8c9d4fc266c3",
+    "previousAppUpstream": "f83961e065b9bf09684c2fda0156ce4564173881",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/cordova-plugin-purchases/issues/1",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:08Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/cordova-plugin-purchases/pull/2",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:18:11Z",
+        "headSha": "987ad9a51684ae1f5546ed880a60021a25c6ddef"
+      },
+      {
+        "url": "https://github.com/RevenueCat/cordova-plugin-purchases/pull/705",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2025-08-11T15:16:39Z",
+        "headSha": "4d675456dfa55a29d6364a54d385bc811c3b90b1"
+      },
+      {
+        "url": "https://github.com/RevenueCat/cordova-plugin-purchases/pull/709",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2025-08-11T18:55:05Z",
+        "headSha": "0679ed59669f80e8f7311a7955459c83856b1296"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:28.336122+00:00"
+  },
+  {
+    "id": "RC-CORDOVA-20261015-002",
+    "repository": "RevenueCat/cordova-plugin-purchases",
+    "upstream": "de5de0fb0e019d882f39b3f3124b8c9d4fc266c3",
+    "previousAppUpstream": "f83961e065b9bf09684c2fda0156ce4564173881",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/cordova-plugin-purchases/issues/3",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:13Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/cordova-plugin-purchases/pull/4",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:18:16Z",
+        "headSha": "38066a77c97d8bff2dc357e3c3d6f7358e0a18f1"
+      },
+      {
+        "url": "https://github.com/RevenueCat/cordova-plugin-purchases/issues/107",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2022-08-29T20:22:42Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/cordova-plugin-purchases/issues/89",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-03-26T00:32:32Z",
+        "headSha": null
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:29.220352+00:00"
+  },
+  {
+    "id": "RC-CLI-20261016-001",
+    "repository": "RevenueCat/cli",
+    "upstream": "025a0dee0e5620f4897264bc8fc2e540193f644a",
+    "previousAppUpstream": "0381e9169458c084fa78dd23d6fcceb7f5b1022d",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/RevenueCat/cli/issues/199",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-22T09:22:57Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/cli/pull/200",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-22T09:22:20Z",
+        "headSha": "6bcc94ecafd91af8af155ca2754729f5c7df74fb"
+      },
+      {
+        "url": "https://github.com/manyoneek/cli/issues/1",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-10-22T09:24:06Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/cli/pull/2",
+        "state": "closed",
+        "merged": false,
+        "updatedAt": "2026-10-22T09:24:09Z",
+        "headSha": "9a70ead013ddb9bd1fe9840141079d4a77de581d"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:31.265348+00:00"
+  },
+  {
+    "id": "RC-PHC-20261017-001",
+    "repository": "RevenueCat/purchases-hybrid-common",
+    "upstream": "ed23f3f08d1abe97d0ebe591b708bb984f8c2ced",
+    "previousAppUpstream": "466bddb7170d6cef064c347c1c270817dc1617fe",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/purchases-hybrid-common/issues/1",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:24Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/purchases-hybrid-common/pull/2",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:18:27Z",
+        "headSha": "b49a63db14c98cf25baae4c0c4f7bb4edcb5224d"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-hybrid-common/pull/1195",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2025-07-09T11:01:03Z",
+        "headSha": "1b4fb65e785a66c0b1d2db01749e5caba76624f0"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-hybrid-common/pull/621",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2024-07-24T14:28:47Z",
+        "headSha": "0805b7da184c9666155043eacbec4ab1b44c2ea7"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:30.978462+00:00"
+  },
+  {
+    "id": "RC-PHC-20261017-002",
+    "repository": "RevenueCat/purchases-hybrid-common",
+    "upstream": "ed23f3f08d1abe97d0ebe591b708bb984f8c2ced",
+    "previousAppUpstream": "466bddb7170d6cef064c347c1c270817dc1617fe",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/purchases-hybrid-common/issues/3",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:30Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/purchases-hybrid-common/pull/4",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:18:33Z",
+        "headSha": "0cfd2e41c379921aa2d5b66ad75ec6bec813d503"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-hybrid-common/pull/1447",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2026-01-30T10:43:13Z",
+        "headSha": "81304ea79d5d404cf53596fb385d445b6bc0797d"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:31.617117+00:00"
+  },
+  {
+    "id": "RC-CAPACITOR-20261018-001",
+    "repository": "RevenueCat/purchases-capacitor",
+    "upstream": "ba38d294a900c8a50024e15a023c3e954b5060d5",
+    "previousAppUpstream": "59927eeb5e8a8dc2ce904f20c1e6dc7c14308947",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/purchases-capacitor/issues/1",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:35Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/purchases-capacitor/pull/2",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:18:38Z",
+        "headSha": "f5d80e21c7db7996c34e95a4d5d9ea3989d5c050"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-capacitor/pull/628",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2025-12-17T10:14:12Z",
+        "headSha": "397cc96a94dd99634c51079b2b1e7892b2f3db14"
+      },
+      {
+        "url": "https://github.com/RevenueCat/purchases-capacitor/issues/568",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2025-10-21T05:08:41Z",
+        "headSha": null
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:32.795462+00:00"
+  },
+  {
+    "id": "RC-RN-20261020-001",
+    "repository": "RevenueCat/react-native-purchases",
+    "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+    "previousAppUpstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/2053",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-22T05:13:27Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/pull/2054",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-22T09:16:45Z",
+        "headSha": "97be2623bd866aeba580bfcd111fb22d8e27c769"
+      },
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/issues/5",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-10-21T14:23:11Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/pull/6",
+        "state": "closed",
+        "merged": false,
+        "updatedAt": "2026-10-21T14:23:15Z",
+        "headSha": "0dddfd7f73e0dae0fbe445bf8b48e1526ce06c69"
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/1190",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-03-26T00:20:58Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/pull/925",
+        "state": "closed",
+        "merged": true,
+        "updatedAt": "2024-03-13T12:43:03Z",
+        "headSha": "70e72dd2ea1c758b0cbb748d571beaae543878ad"
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:34.590400+00:00"
+  },
+  {
+    "id": "RC-RN-20261020-002",
+    "repository": "RevenueCat/react-native-purchases",
+    "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+    "previousAppUpstream": "c656a4274c6203c1c7d73c7a345307d2c1966a64",
+    "sourceChangedSinceApp": true,
+    "publications": [
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/issues/7",
+        "state": "open",
+        "merged": null,
+        "updatedAt": "2026-10-20T22:18:46Z",
+        "headSha": null
+      },
+      {
+        "url": "https://github.com/manyoneek/react-native-purchases/pull/8",
+        "state": "open",
+        "merged": false,
+        "updatedAt": "2026-10-20T22:20:25Z",
+        "headSha": "aaf5c49d6e4801ac3d45d9cf904c560f391dbfae"
+      },
+      {
+        "url": "https://github.com/RevenueCat/react-native-purchases/issues/1190",
+        "state": "closed",
+        "merged": null,
+        "updatedAt": "2026-03-26T00:20:58Z",
+        "headSha": null
+      }
+    ],
+    "checkedAt": "2026-10-23T22:17:33.104795+00:00"
+  }
+]

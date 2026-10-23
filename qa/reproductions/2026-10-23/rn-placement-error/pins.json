@@ -1,0 +1,7 @@
+{
+  "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+  "previousFix": "97be2623bd866aeba580bfcd111fb22d8e27c769",
+  "mergeCommit": "a39922d549b824b46d2d916143ed8c8178d06552",
+  "worktree": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-23/worktrees/rn-placement-review",
+  "fix": "36c08946262d4779e87dacc598025db63debe153"
+}

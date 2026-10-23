@@ -1,0 +1,17 @@
+diff --git a/ios/RNPurchases.m b/ios/RNPurchases.m
+index 2651c97a..cfa86d28 100644
+--- a/ios/RNPurchases.m
++++ b/ios/RNPurchases.m
+@@ -143,9 +143,9 @@ - (void)sendEventWithName:(NSString *)name body:(id)body {
+                   resolve:(RCTPromiseResolveBlock)resolve
+                   reject:(RCTPromiseRejectBlock)reject) {
+ 
+-    [RCCommonFunctionality getCurrentOfferingForPlacement:placementIdentifier.mappingNSNullToNil completionBlock:^(NSDictionary *offeringObject, RCErrorContainer *error) {
+-        resolve(offeringObject);
+-    }];
++    [RCCommonFunctionality getCurrentOfferingForPlacement:placementIdentifier.mappingNSNullToNil
++                                         completionBlock:[self getResponseCompletionBlockWithResolve:resolve
++                                                                                              reject:reject]];
+ }
+ 
+ //syncAttributesAndOfferingsIfNeeded

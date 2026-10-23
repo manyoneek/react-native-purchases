@@ -1,0 +1,32 @@
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+PASS __tests__/presentPaywallCallbacks.test.ts
+PASS __tests__/customVariables.test.ts
+PASS __tests__/errorCallbacks.test.ts
+PASS __tests__/presentPaywallCallbacksPreview.test.ts
+  ● Console
+
+    console.warn
+      [RevenueCatUI] [presentPaywall] This method is available but has no effect in Preview API mode.
+
+    [0m [90m 1033 |[39m     [36mif[39m (usingPreviewAPIMode) {
+     [90m 1034 |[39m       [90m// tslint:disable-next-line:no-console[39m
+    [31m[1m>[22m[39m[90m 1035 |[39m       console[33m.[39mwarn([32m`[RevenueCatUI] [${methodName}] This method is available but has no effect in Preview API mode.`[39m)[33m;[39m
+     [90m      |[39m               [31m[1m^[22m[39m
+     [90m 1036 |[39m     }
+     [90m 1037 |[39m   }
+     [90m 1038 |[39m }[0m
+
+      at RevenueCatUI.logWarningIfPreviewAPIMode (src/index.tsx:1035:15)
+      at RevenueCatUI.presentPaywall (src/index.tsx:617:18)
+      at Object.<anonymous> (__tests__/presentPaywallCallbacksPreview.test.ts:26:34)
+
+
+Test Suites: 4 passed, 4 total
+Tests:       37 passed, 37 total
+Snapshots:   0 total
+Time:        2.414 s
+Ran all test suites.

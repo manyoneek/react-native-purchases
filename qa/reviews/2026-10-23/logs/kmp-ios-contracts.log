@@ -1,0 +1,30 @@
+Calculating task graph as configuration cache cannot be reused because directory '../../../../../../../../.konan/kotlin-native-prebuilt-macos-aarch64-2.3.20/klib/platform/ios_simulator_arm64' has changed.
+Type-safe project accessors is an incubating feature.
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+> Task :models:iosSimulatorArm64ProcessResources NO-SOURCE
+> Task :models:kmpPartiallyResolvedDependenciesChecker
+> Task :models:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :models:downloadKotlinNativeDistribution UP-TO-DATE
+> Task :models:compileKotlinIosSimulatorArm64 UP-TO-DATE
+> Task :models:iosSimulatorArm64MainKlibrary UP-TO-DATE
+> Task :models:compileTestKotlinIosSimulatorArm64
+> Task :models:linkDebugTestIosSimulatorArm64
+> Task :models:iosSimulatorArm64Test
+
+[Incubating] Problems report is available at: file:///Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-23/worktrees/purchases-kmp/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+10 actionable tasks: 4 executed, 6 up-to-date
+Configuration cache entry stored.

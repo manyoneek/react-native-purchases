@@ -1,0 +1,52 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+        "deviceName" : "iPhone Duo",
+        "modelName" : "iPhone",
+        "osBuildNumber" : "24A94232",
+        "osVersion" : "27.1",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 1,
+      "passedTests" : 3,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "RNPurchases-Unit-UnitTests · Built with macOS 27.0.1",
+  "expectedFailures" : 0,
+  "failedTests" : 1,
+  "finishTime" : 1792793919.846,
+  "passedTests" : 3,
+  "result" : "Failed",
+  "runtimeWarnings" : [
+
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1792793818.657,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+    {
+      "failureText" : "((resolveCalls) equal to (0u)) failed: (\"1\") is not equal to (\"0\")",
+      "targetName" : "RNPurchases-Unit-UnitTests",
+      "testIdentifier" : 1,
+      "testIdentifierString" : "RNPurchasesPlacementTests/testRejectsNetworkError",
+      "testIdentifierURL" : "test://com.apple.xcode/Pods/RNPurchases-Unit-UnitTests/RNPurchasesPlacementTests/testRejectsNetworkError",
+      "testName" : "testRejectsNetworkError"
+    }
+  ],
+  "title" : "Test - RNPurchases-Unit-UnitTests",
+  "topInsights" : [
+
+  ],
+  "totalTestCount" : 4
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "./gradlew",
+    ":models:testDebugUnitTest",
+    "--console=plain"
+  ],
+  "cwd": "runs/2026-10-23/worktrees/purchases-kmp",
+  "exit": 1,
+  "timedOut": false,
+  "seconds": 15.53,
+  "log": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-23/logs/kmp-models-configured.log"
+}
