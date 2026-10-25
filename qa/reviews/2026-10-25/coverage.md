@@ -1,0 +1,16 @@
+# RevenueCat SDK review — October 25, 2026
+
+No new confirmed defect. The existing React Native successful-No-Offering bug was reverified on current upstream for migration to RevenueCat, with a separate two-line implementation fix and five permanent Jest checks.
+
+- Inventory: all 76 public repositories, including forks/archives; 76 local clone origins verified, no missing clones. Six direct manyoneek forks synchronized; existing fix/evidence branches preserved. Reviews used isolated worktrees.
+- React Native `bde1095e84113c07569c0aab6858171768cb9aaf`: reviewed placement/null/error routing and browser/native parity. Original suite: 274 passes. Focused regression: 4 passes / 1 failure before. Fixed suite: 279 passes; build and lint pass. Jest exercises the production wrapper with a mocked native boundary.
+- Fresh RCBugReporter iOS 27.1 simulator app, RN 0.87.1, shared SDK 19.15.1, RevenueCat 5.98.0: successful real Test Store No Offering request resolves undefined and the documented null-guarded consumer throws before; resolves null and the same consumer succeeds afterward. App tests: 1 pass / 1 failure before, 2 passes after, including a normal-offering control. No injected responses, purchases, Android app or physical-device coverage.
+- Android `517a51e43484ce7edd27808ca79b15c64b944eda`: inspected new virtual-currency spend validation, per-user cache handling, fetch/spend serialization, completion, and placement fallback. The Gradle virtual-currency suite could not configure because the Android SDK is absent. Ran the unmodified production `PerUserSerialQueue` and its four existing JUnit tests directly with Kotlin 2.0.21/JDK 21; all pass. Added FIFO draining, reentrant enqueue and concurrent enqueue/completion tests: all seven pass. This is pure-JVM queue coverage, not the Android manager/backend/app suite.
+
+[Cross-SDK contracts](parity.md) distinguish native nullable placements and internal-only spending APIs. No additional customer-relevant missing API was established.
+
+Duplicate search covered open/closed RevenueCat issues and PRs, including indexed comments, for placement lookup, No Offering, null and undefined. Read related bodies/comments: RN #1190 describes Android first-use initialization, #2018 a native paywall memory crash, #1088 an Android purchase hang; none matches this successful iOS lookup's JS null contract. RN #925/#938 and shared #748 introduce the feature. RN #2053/#2054 concern failed requests and are distinct. Search indexing can omit unindexed discussions.
+
+All twelve known findings' publication states were checked. Existing closed duplicate/resolved reports remain closed. Older app evidence retains its original dates; a status check is not a fresh reproduction. Five other eligible fork pairs remain pending their own latest-source verification and migration. No direct upstream push or merge; schedule unchanged.
+
+The first raw recording included the previously open app before XCTest launched RCBugReporter. Published clips are trimmed to the affected app flow and inspected; assertion-time screenshots come from XCTest attachments. Xcode emitted simulator diagnostic-collection warnings after the expected failing test; assertions, result bundles, screenshots and continuous simctl recordings were preserved.

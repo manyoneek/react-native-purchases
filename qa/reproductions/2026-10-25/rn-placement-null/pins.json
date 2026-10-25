@@ -1,0 +1,8 @@
+{
+  "upstream": "bde1095e84113c07569c0aab6858171768cb9aaf",
+  "version": "10.15.1",
+  "fix": "9da2b5502433182f726c5a7ba40d5055b696ad31",
+  "previousFix": "aaf5c49d6e4801ac3d45d9cf904c560f391dbfae",
+  "date": "2026-10-25",
+  "branch": "fix/null-placement-offering-current"
+}

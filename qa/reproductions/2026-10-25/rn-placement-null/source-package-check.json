@@ -1,0 +1,37 @@
+[
+  {
+    "name": "packaged-prepare",
+    "command": [
+      "python3",
+      "prepare.py",
+      "fixed"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "packaged-app",
+    "command": [
+      "xcodebuild",
+      "test",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/source-check-derived",
+      "-resultBundlePath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/source-check.xcresult",
+      "-parallel-testing-enabled",
+      "NO",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testNoOffering",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl",
+      "CODE_SIGNING_ALLOWED=NO",
+      "ONLY_ACTIVE_ARCH=YES"
+    ],
+    "exit": 0
+  }
+]

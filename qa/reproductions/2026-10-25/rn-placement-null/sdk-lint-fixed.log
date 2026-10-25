@@ -1,0 +1,36 @@
+The 'no-shadowed-variable' rule threw an error in 'src/normalizingRejections.ts':
+TypeError: DeprecationError: 'originalKeywordKind' has been deprecated since v5.0.0 and can no longer be used. Use 'identifierToKeywordKind(identifier)' instead.
+    at /Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174085:13
+    at IdentifierObject.<anonymous> (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174115:7)
+    at Object.isThisParameter (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tsutils/util/util.js:36:79)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noShadowedVariableRule.js:207:36)
+    at visitNodes (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28321:24)
+    at forEachChildInFunctionDeclaration (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28837:192)
+    at Object.forEachChild (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28406:37)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noShadowedVariableRule.js:238:20)
+    at visitNodes (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28321:24)
+    at forEachChildInSourceFile (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28964:18)
+The 'no-shadowed-variable' rule threw an error in 'src/purchases.ts':
+TypeError: DeprecationError: 'originalKeywordKind' has been deprecated since v5.0.0 and can no longer be used. Use 'identifierToKeywordKind(identifier)' instead.
+    at /Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174085:13
+    at IdentifierObject.<anonymous> (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174115:7)
+    at Object.isThisParameter (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tsutils/util/util.js:36:79)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noShadowedVariableRule.js:207:36)
+    at visitNodes (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28321:24)
+    at forEachChildInFunctionType (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28817:117)
+    at Object.forEachChild (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28406:37)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noShadowedVariableRule.js:238:20)
+    at visitNode2 (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28313:20)
+    at forEachChildInTypeAliasDeclaration (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:29034:150)
+The 'no-unnecessary-initializer' rule threw an error in 'src/purchases.ts':
+TypeError: DeprecationError: 'originalKeywordKind' has been deprecated since v5.0.0 and can no longer be used. Use 'identifierToKeywordKind(identifier)' instead.
+    at /Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174085:13
+    at IdentifierObject.<anonymous> (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:174115:7)
+    at isUndefined (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noUnnecessaryInitializerRule.js:105:14)
+    at checkInitializer (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noUnnecessaryInitializerRule.js:82:13)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noUnnecessaryInitializerRule.js:59:21)
+    at visitNodes (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28321:24)
+    at forEachChildInVariableDeclarationList (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28970:18)
+    at Object.forEachChild (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28406:37)
+    at cb (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/tslint/lib/rules/noUnnecessaryInitializerRule.js:79:12)
+    at visitNode2 (/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases/node_modules/typescript/lib/typescript.js:28313:20)

@@ -1,0 +1,38 @@
+[
+  {
+    "scene": "intro",
+    "seconds": 6,
+    "source": null,
+    "start": 0
+  },
+  {
+    "scene": "before",
+    "seconds": 7,
+    "source": "app-before.mp4",
+    "start": 19
+  },
+  {
+    "scene": "cause",
+    "seconds": 9,
+    "source": null,
+    "start": 0
+  },
+  {
+    "scene": "fix",
+    "seconds": 8,
+    "source": null,
+    "start": 0
+  },
+  {
+    "scene": "fixed",
+    "seconds": 7,
+    "source": "app-fixed.mp4",
+    "start": 7
+  },
+  {
+    "scene": "verified",
+    "seconds": 8,
+    "source": null,
+    "start": 0
+  }
+]

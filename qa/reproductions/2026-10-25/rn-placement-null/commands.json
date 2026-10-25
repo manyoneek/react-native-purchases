@@ -1,0 +1,213 @@
+[
+  {
+    "name": "boot",
+    "command": [
+      "xcrun",
+      "simctl",
+      "bootstatus",
+      "286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-b"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "app-build-before",
+    "command": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-derived",
+      "CODE_SIGNING_ALLOWED=NO",
+      "ONLY_ACTIVE_ARCH=YES",
+      "build-for-testing"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "app-before",
+    "command": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-derived",
+      "CODE_SIGNING_ALLOWED=NO",
+      "ONLY_ACTIVE_ARCH=YES",
+      "test-without-building",
+      "-parallel-testing-enabled",
+      "NO",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testNoOffering",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl",
+      "-resultBundlePath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 65,
+    "expected": 65
+  },
+  {
+    "name": "attachments-before",
+    "command": [
+      "xcrun",
+      "xcresulttool",
+      "export",
+      "attachments",
+      "--path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult",
+      "--output-path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/attachments-before"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "summary-before",
+    "command": [
+      "xcrun",
+      "xcresulttool",
+      "get",
+      "test-results",
+      "summary",
+      "--path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "sdk-build-fixed",
+    "command": [
+      "corepack",
+      "yarn",
+      "build"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "sdk-core-fixed",
+    "command": [
+      "corepack",
+      "yarn",
+      "test",
+      "--runInBand",
+      "--json",
+      "--outputFile=/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-core-fixed-results.json"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "sdk-lint-fixed",
+    "command": [
+      "corepack",
+      "yarn",
+      "tslint"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/worktrees/react-native-purchases",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "app-build-fixed",
+    "command": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-derived",
+      "CODE_SIGNING_ALLOWED=NO",
+      "ONLY_ACTIVE_ARCH=YES",
+      "build-for-testing"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "app-fixed",
+    "command": [
+      "xcodebuild",
+      "-workspace",
+      "ios/RCBugReporter.xcworkspace",
+      "-scheme",
+      "QAReproduction",
+      "-configuration",
+      "Debug",
+      "-destination",
+      "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9",
+      "-derivedDataPath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-derived",
+      "CODE_SIGNING_ALLOWED=NO",
+      "ONLY_ACTIVE_ARCH=YES",
+      "test-without-building",
+      "-parallel-testing-enabled",
+      "NO",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testNoOffering",
+      "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl",
+      "-resultBundlePath",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-fixed.xcresult"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "attachments-fixed",
+    "command": [
+      "xcrun",
+      "xcresulttool",
+      "export",
+      "attachments",
+      "--path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-fixed.xcresult",
+      "--output-path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/attachments-fixed"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "summary-fixed",
+    "command": [
+      "xcrun",
+      "xcresulttool",
+      "get",
+      "test-results",
+      "summary",
+      "--path",
+      "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-fixed.xcresult"
+    ],
+    "cwd": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app",
+    "exit": 0,
+    "expected": 0
+  }
+]

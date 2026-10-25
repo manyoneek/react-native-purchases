@@ -1,0 +1,260 @@
+Command line invocation:
+    /Applications/Xcode-27.1.0-release.candidate.app/Contents/Developer/usr/bin/xcodebuild -workspace ios/RCBugReporter.xcworkspace -scheme QAReproduction -configuration Debug -destination "platform=iOS Simulator,id=286DC73D-2455-4F1B-A4A2-56E3BDEE64D9" -derivedDataPath /Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-derived CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES test-without-building -parallel-testing-enabled NO "-only-testing:RCBugReporterUITests/ReproductionTests/testNoOffering" "-only-testing:RCBugReporterUITests/ReproductionTests/testOnlineControl" -resultBundlePath /Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    ONLY_ACTIVE_ARCH = YES
+
+Writing result bundle at path:
+	/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult
+
+2026-10-25 06:04:30.907 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:30.907 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:04:41.972315-0300 RCBugReporterUITests-Runner[37142:9312411] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-10-25 06:04:44.685.
+Test Suite 'RCBugReporterUITests.xctest' started at 2026-10-25 06:04:44.686.
+Test Suite 'ReproductionTests' started at 2026-10-25 06:04:44.686.
+Test Case '-[RCBugReporterUITests.ReproductionTests testNoOffering]' started.
+    t =     0.00s Start Test at 2026-10-25 06:04:44.690
+    t =     0.03s Set Up
+    t =     0.03s Open com.revenuecat.sdkbugreporter.rnplacement
+    t =     0.03s     Launch com.revenuecat.sdkbugreporter.rnplacement
+2026-10-25 06:04:44.934 xcodebuild[37105:9311930] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-25 06:04:44.934 xcodebuild[37105:9311930] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-25 06:04:44.968 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:44.968 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+objc[37142]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.94232.0.7Cs8Oe/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.1.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x102f08310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.1.94232.0.7Cs8Oe/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.1.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x10648c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     0.86s         Setting up automation session
+    t =     3.08s         Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+<unknown>:0: warning: -[RCBugReporterUITests.ReproductionTests testNoOffering] : [Internal] Thread running at User-interactive quality-of-service class waiting on a thread without a QoS class specified (base priority 33). Investigate ways to avoid priority inversions
+    t =     4.58s Waiting 40.0s for "No offering case" Button to exist
+    t =     5.65s     Checking `Expect predicate `existsNoRetry == 1` for object "No offering case" Button`
+    t =     5.65s         Checking existence of `"No offering case" Button`
+    t =     5.71s Tap "No offering case" Button
+    t =     5.71s     Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+    t =     5.71s     Find the "No offering case" Button
+    t =     5.72s     Check for interrupting elements affecting "No offering case" Button
+    t =     5.76s         Wait for com.apple.springboard to idle
+    t =     5.81s     Synthesize event
+    t =     6.12s     Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+    t =     6.12s Waiting 80.0s for "Run complete" StaticText to exist
+    t =     7.17s     Checking `Expect predicate `existsNoRetry == 1` for object "Run complete" StaticText`
+    t =     7.17s         Checking existence of `"Run complete" StaticText`
+    t =     7.18s Find the "qa-output" StaticText
+QA_OUTPUT no-offering: NO OFFERING CASE
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED undefined
+
+Strict null: false (expected true)
+
+Null-guarded consumer THREW: TypeError: Cannot read property 'identifier' of undefined
+    t =     7.19s Requesting snapshot of accessibility hierarchy for app with pid 37165
+    t =     7.22s Requesting snapshot of accessibility hierarchy for app with pid 37165
+QA_TREE no-offering: Attributes: Application, 0x103292800, pid: 37165, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x103292800, pid: 37165, label: 'RCBugReporter'
+    Window (Main), 0x103292e40, {{0.0, 0.0}, {466.0, 678.0}}
+      Other, 0x103292f80, {{0.0, 0.0}, {466.0, 678.0}}
+        Other, 0x103292d00, {{0.0, 0.0}, {466.0, 678.0}}
+          Other, 0x1032930c0, {{0.0, 0.0}, {466.0, 678.0}}
+            Other, 0x103293340, {{0.0, 0.0}, {466.0, 678.0}}
+              Other, 0x103293480, {{0.0, 0.0}, {466.0, 678.0}}
+                Other, 0x1032935c0, {{0.0, 0.0}, {466.0, 678.0}}
+                  StaticText, 0x103293700, {{0.0, 20.0}, {382.0, 30.0}}, label: 'No Offering → null'
+                    StaticText, 0x103293980, {{0.0, 20.0}, {382.0, 30.0}}, label: 'No Offering → null'
+                  StaticText, 0x103291180, {{0.0, 58.0}, {382.0, 15.7}}, label: 'React Native Purchases · bde1095e · iOS'
+                    StaticText, 0x103291040, {{0.0, 58.0}, {382.0, 15.7}}, label: 'React Native Purchases · bde1095e · iOS'
+                  StaticText, 0x10606c640, {{0.0, 81.7}, {382.0, 15.7}}, label: 'SDK Bug Reporter · synthetic Test Store only'
+                    StaticText, 0x10606e080, {{0.0, 81.7}, {382.0, 15.7}}, label: 'SDK Bug Reporter · synthetic Test Store only'
+                  StaticText, 0x10606cb40, {{0.0, 121.3}, {382.0, 357.0}}, identifier: 'qa-output', label: 'NO OFFERING CASE
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED undefined
+
+Strict null: false (expected true)
+
+Null-guarded consumer THREW: TypeError: Cannot read property 'identifier' of undefined'
+                    StaticText, 0x10606cc80, {{0.0, 121.3}, {382.0, 357.0}}, label: 'NO OFFERING CASE
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED undefined
+
+Strict null: false (expected true)
+
+Null-guarded consumer THREW: TypeError: Cannot read property 'identifier' of undefined'
+                  StaticText, 0x10606d040, {{0.0, 498.3}, {382.0, 24.0}}, label: 'Run complete'
+                    StaticText, 0x10606cdc0, {{0.0, 498.3}, {382.0, 24.0}}, label: 'Run complete'
+                  StaticText, 0x10606cf00, {{0.0, 530.3}, {382.0, 15.7}}, label: 'Live capture · 3.5s'
+                    StaticText, 0x10606d180, {{0.0, 530.3}, {382.0, 15.7}}, label: 'Live capture · 3.5s'
+                  StaticText, 0x10606d2c0, {{0.0, 568.0}, {382.0, 31.3}}, label: 'Real Test Store placement set to No Offering. No mocked responses. No purchases.'
+                    StaticText, 0x10606d400, {{0.0, 568.0}, {382.0, 31.3}}, label: 'Real Test Store placement set to No Offering. No mocked responses. No purchases.'
+                Other, 0x10606d7c0, {{0.0, 0.0}, {466.0, 678.0}}
+                  Other, 0x10606d900, {{0.0, 0.0}, {466.0, 678.0}}
+                    Other, 0x10606d540, {{0.0, 0.0}, {466.0, 678.0}}
+Path to element:
+ →Application, 0x103292800, pid: 37165, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'com.revenuecat.sdkbugreporter.rnplacement'
+  Output: {
+    Application, 0x10606d680, pid: 37165, label: 'RCBugReporter'
+  }
+
+    t =     7.23s Find the Target Application 'com.revenuecat.sdkbugreporter.rnplacement'
+    t =     7.31s Added attachment named 'no-offering'
+    t =    11.32s Requesting snapshot of accessibility hierarchy for app with pid 37165
+    t =    11.38s Requesting snapshot of accessibility hierarchy for app with pid 37165
+/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-app/ios/RCBugReporterUITests/ReproductionTests.swift:29: error: -[RCBugReporterUITests.ReproductionTests testNoOffering] : XCTAssertTrue failed
+    t =    11.56s Tear Down
+Test Case '-[RCBugReporterUITests.ReproductionTests testNoOffering]' failed (11.794 seconds).
+Test Case '-[RCBugReporterUITests.ReproductionTests testOnlineControl]' started.
+    t =     0.00s Start Test at 2026-10-25 06:04:56.485
+    t =     0.03s Set Up
+    t =     0.03s Open com.revenuecat.sdkbugreporter.rnplacement
+    t =     0.03s     Launch com.revenuecat.sdkbugreporter.rnplacement
+    t =     0.03s         Terminate com.revenuecat.sdkbugreporter.rnplacement:37165
+2026-10-25 06:04:56.536 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:56.536 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:04:56.536 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:56.536 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:04:56.536 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:56.537 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:04:57.606 xcodebuild[37105:9311930] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-25 06:04:57.606 xcodebuild[37105:9311930] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-25 06:04:57.611 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:04:57.611 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+    t =     1.33s         Setting up automation session
+    t =     3.04s         Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+    t =     4.20s Waiting 40.0s for "Online control" Button to exist
+<unknown>:0: warning: -[RCBugReporterUITests.ReproductionTests testOnlineControl] : [Internal] Thread running at User-interactive quality-of-service class waiting on a thread without a QoS class specified (base priority 33). Investigate ways to avoid priority inversions
+    t =     5.25s     Checking `Expect predicate `existsNoRetry == 1` for object "Online control" Button`
+    t =     5.25s         Checking existence of `"Online control" Button`
+    t =     5.29s Tap "Online control" Button
+    t =     5.30s     Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+    t =     5.30s     Find the "Online control" Button
+    t =     5.31s     Check for interrupting elements affecting "Online control" Button
+    t =     5.32s         Wait for com.apple.springboard to idle
+    t =     5.34s     Synthesize event
+    t =     5.64s     Wait for com.revenuecat.sdkbugreporter.rnplacement to idle
+    t =     5.64s Waiting 80.0s for "Run complete" StaticText to exist
+    t =     6.70s     Checking `Expect predicate `existsNoRetry == 1` for object "Run complete" StaticText`
+    t =     6.70s         Checking existence of `"Run complete" StaticText`
+    t =     6.72s Find the "qa-output" StaticText
+QA_OUTPUT online-control: ONLINE CONTROL
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED default
+    t =     6.74s Requesting snapshot of accessibility hierarchy for app with pid 37203
+    t =     6.77s Requesting snapshot of accessibility hierarchy for app with pid 37203
+QA_TREE online-control: Attributes: Application, 0x10606d680, pid: 37203, label: 'RCBugReporter'
+Element subtree:
+ →Application, 0x10606d680, pid: 37203, label: 'RCBugReporter'
+    Window (Main), 0x10606f700, {{0.0, 0.0}, {466.0, 678.0}}
+      Other, 0x10606f5c0, {{0.0, 0.0}, {466.0, 678.0}}
+        Other, 0x10606f340, {{0.0, 0.0}, {466.0, 678.0}}
+          Other, 0x10606f480, {{0.0, 0.0}, {466.0, 678.0}}
+            Other, 0x10606f200, {{0.0, 0.0}, {466.0, 678.0}}
+              Other, 0x10606f0c0, {{0.0, 0.0}, {466.0, 678.0}}
+                Other, 0x10606ee40, {{0.0, 0.0}, {466.0, 678.0}}
+                  StaticText, 0x10606c3c0, {{0.0, 20.0}, {382.0, 30.0}}, label: 'No Offering → null'
+                    StaticText, 0x10606c140, {{0.0, 20.0}, {382.0, 30.0}}, label: 'No Offering → null'
+                  StaticText, 0x10606ebc0, {{0.0, 58.0}, {382.0, 15.7}}, label: 'React Native Purchases · bde1095e · iOS'
+                    StaticText, 0x10606fc00, {{0.0, 58.0}, {382.0, 15.7}}, label: 'React Native Purchases · bde1095e · iOS'
+                  StaticText, 0x10606ea80, {{0.0, 81.7}, {382.0, 15.7}}, label: 'SDK Bug Reporter · synthetic Test Store only'
+                    StaticText, 0x10606e940, {{0.0, 81.7}, {382.0, 15.7}}, label: 'SDK Bug Reporter · synthetic Test Store only'
+                  StaticText, 0x10606ef80, {{0.0, 121.3}, {382.0, 231.0}}, identifier: 'qa-output', label: 'ONLINE CONTROL
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED default'
+                    StaticText, 0x10606ed00, {{0.0, 121.3}, {382.0, 231.0}}, label: 'ONLINE CONTROL
+
+Configured: true
+
+Customer info: success (synthetic Test Store user)
+
+getOfferings: success (1 offerings)
+
+getCurrentOfferingForPlacement: RESOLVED default'
+                  StaticText, 0x103291180, {{0.0, 372.3}, {382.0, 24.0}}, label: 'Run complete'
+                    StaticText, 0x1032930c0, {{0.0, 372.3}, {382.0, 24.0}}, label: 'Run complete'
+                  StaticText, 0x103293340, {{0.0, 404.3}, {382.0, 15.7}}, label: 'Live capture · 3.0s'
+                    StaticText, 0x103292f80, {{0.0, 404.3}, {382.0, 15.7}}, label: 'Live capture · 3.0s'
+                  StaticText, 0x103292d00, {{0.0, 442.0}, {382.0, 31.3}}, label: 'Real Test Store placement set to No Offering. No mocked responses. No purchases.'
+                    StaticText, 0x103292800, {{0.0, 442.0}, {382.0, 31.3}}, label: 'Real Test Store placement set to No Offering. No mocked responses. No purchases.'
+                Other, 0x103292e40, {{0.0, 0.0}, {466.0, 678.0}}
+                  Other, 0x103291040, {{0.0, 0.0}, {466.0, 678.0}}
+                    Other, 0x103293700, {{0.0, 0.0}, {466.0, 678.0}}
+Path to element:
+ →Application, 0x10606d680, pid: 37203, label: 'RCBugReporter'
+Query chain:
+ →Find: Target Application 'com.revenuecat.sdkbugreporter.rnplacement'
+  Output: {
+    Application, 0x103293980, pid: 37203, label: 'RCBugReporter'
+  }
+
+    t =     6.78s Find the Target Application 'com.revenuecat.sdkbugreporter.rnplacement'
+    t =     6.85s Added attachment named 'online-control'
+    t =    10.86s Requesting snapshot of accessibility hierarchy for app with pid 37203
+    t =    10.90s Requesting snapshot of accessibility hierarchy for app with pid 37203
+    t =    10.91s Tear Down
+Test Case '-[RCBugReporterUITests.ReproductionTests testOnlineControl]' passed (11.120 seconds).
+Test Suite 'ReproductionTests' failed at 2026-10-25 06:05:07.605.
+	 Executed 2 tests, with 1 failure (0 unexpected) in 22.914 (22.919) seconds
+Test Suite 'RCBugReporterUITests.xctest' failed at 2026-10-25 06:05:07.606.
+	 Executed 2 tests, with 1 failure (0 unexpected) in 22.914 (22.920) seconds
+Test Suite 'Selected tests' failed at 2026-10-25 06:05:07.606.
+	 Executed 2 tests, with 1 failure (0 unexpected) in 22.914 (22.921) seconds
+2026-10-25 06:05:07.631 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.631 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.631 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.631 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.632 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.632 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.644 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.644 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.645 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.645 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.646 xcodebuild[37105:9311930] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-25 06:05:07.646 xcodebuild[37105:9311930] [MT] IDESchemeActionDeviceRecord: versionAndBuild = 27.1 (24A94232), error = invalidDigitCount(94232).
+2026-10-25 06:05:07.922 xcodebuild[37105:9311942]  IDETestOperationsObserverDebug: Failure collecting diagnostics from simulator: Process exited with error 72:
+ xcrun: error: unable to find utility "simctl", not a developer tool or in PATH
+
+2026-10-25 06:05:07.928 xcodebuild[37105:9311930] [MT] IDETestOperationsObserverDebug: 37.124 elapsed -- Testing started completed.
+2026-10-25 06:05:07.928 xcodebuild[37105:9311930] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-25 06:05:07.929 xcodebuild[37105:9311930] [MT] IDETestOperationsObserverDebug: 37.124 sec, +37.124 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-native/app-before.xcresult
+
+Failing tests:
+	ReproductionTests.testNoOffering()
+
+** TEST EXECUTE FAILED **
+
+Testing started

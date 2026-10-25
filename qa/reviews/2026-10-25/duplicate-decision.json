@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-25T09:09:52.850649+00:00",
+  "decision": "no-duplicate-found",
+  "reason": "Successful iOS No Offering resolves undefined, violating nullable JS contract. #2053/#2054 handle failed native requests; #1190 Android first-use initialization; #2018 native paywall memory crash; #1088 Android purchase hang. #925/#938 and shared #748 are introduction history.",
+  "searchCoverage": "All-state issue/PR searches with in:title,body,comments; related bodies, issue comments and introduction/error-PR review comments read.",
+  "limitations": "GitHub search indexing can omit unindexed discussions.",
+  "relatedUpstream": [
+    "https://github.com/RevenueCat/react-native-purchases/issues/1190",
+    "https://github.com/RevenueCat/react-native-purchases/pull/2054",
+    "https://github.com/RevenueCat/react-native-purchases/issues/2018",
+    "https://github.com/RevenueCat/react-native-purchases/issues/1088",
+    "https://github.com/RevenueCat/purchases-hybrid-common/pull/748"
+  ],
+  "evidence": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/rn-duplicate-search.json"
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "./gradlew",
+    ":purchases:testDefaultsDebugUnitTest",
+    "--tests",
+    "com.revenuecat.purchases.virtualcurrencies.*",
+    "--console=plain"
+  ],
+  "cwd": "runs/2026-10-25/worktrees/purchases-android",
+  "exit": 1,
+  "timedOut": false,
+  "seconds": 19.98,
+  "log": "/Users/mannyoneek/.openclaw/workspace/projects/revenuecat-bug-reporter/runs/2026-10-25/logs/android-baseline.log"
+}

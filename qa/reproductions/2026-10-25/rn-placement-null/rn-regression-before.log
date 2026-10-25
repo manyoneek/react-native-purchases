@@ -1,0 +1,32 @@
+FAIL __tests__/placementNullContract.test.js
+  ✓ normalizes absent offering null to null (1 ms)
+  ✕ normalizes absent offering undefined to null
+  ✓ preserves an existing offering
+  ✓ preserves error rejection
+  ✓ rejects an unconfigured request before calling native code
+
+  ● normalizes absent offering undefined to null
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: null
+    Received: undefined
+
+    [0m [90m  9 |[39m test[33m.[39meach([[36mnull[39m[33m,[39m undefined])([32m'normalizes absent offering %s to null'[39m[33m,[39m [36masync[39m value [33m=>[39m {
+     [90m 10 |[39m   [33mNativeModules[39m[33m.[39m[33mRNPurchases[39m[33m.[39mgetCurrentOfferingForPlacement[33m.[39mmockResolvedValueOnce(value)[33m;[39m
+    [31m[1m>[22m[39m[90m 11 |[39m   expect([36mawait[39m [33mPurchases[39m[33m.[39mgetCurrentOfferingForPlacement([32m'no_offering'[39m))[33m.[39mtoBe([36mnull[39m)[33m;[39m
+     [90m    |[39m                                                                         [31m[1m^[22m[39m
+     [90m 12 |[39m })[33m;[39m
+     [90m 13 |[39m
+     [90m 14 |[39m test([32m'preserves an existing offering'[39m[33m,[39m [36masync[39m () [33m=>[39m {[0m
+
+      at toBe (__tests__/placementNullContract.test.js:11:73)
+      at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+      at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        0.402 s
+Ran all test suites matching /placementNullContract/i.
+Test results written to: ../../rn-regression-before-results.json

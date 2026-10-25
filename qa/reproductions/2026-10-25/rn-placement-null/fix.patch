@@ -1,0 +1,51 @@
+diff --git a/__tests__/placementNullContract.test.js b/__tests__/placementNullContract.test.js
+new file mode 100644
+index 00000000..b64aa9f9
+--- /dev/null
++++ b/__tests__/placementNullContract.test.js
+@@ -0,0 +1,31 @@
++import { NativeModules } from 'react-native';
++import Purchases from '../src/purchases';
++
++beforeEach(() => {
++  jest.clearAllMocks();
++  NativeModules.RNPurchases.isConfigured.mockResolvedValue(true);
++});
++
++test.each([null, undefined])('normalizes absent offering %s to null', async value => {
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(value);
++  expect(await Purchases.getCurrentOfferingForPlacement('no_offering')).toBe(null);
++});
++
++test('preserves an existing offering', async () => {
++  const offering = { identifier: 'default' };
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockResolvedValueOnce(offering);
++  expect(await Purchases.getCurrentOfferingForPlacement('default')).toBe(offering);
++});
++
++test('preserves error rejection', async () => {
++  NativeModules.RNPurchases.getCurrentOfferingForPlacement.mockRejectedValueOnce(
++    Object.assign(new Error('offline'), { code: '10' })
++  );
++  await expect(Purchases.getCurrentOfferingForPlacement('default')).rejects.toMatchObject({ code: '10' });
++});
++
++test('rejects an unconfigured request before calling native code', async () => {
++  NativeModules.RNPurchases.isConfigured.mockResolvedValueOnce(false);
++  await expect(Purchases.getCurrentOfferingForPlacement('default')).rejects.toBeInstanceOf(Error);
++  expect(NativeModules.RNPurchases.getCurrentOfferingForPlacement).not.toHaveBeenCalled();
++});
+diff --git a/src/purchases.ts b/src/purchases.ts
+index 6c07aff1..13da2517 100644
+--- a/src/purchases.ts
++++ b/src/purchases.ts
+@@ -818,7 +818,8 @@ export default class Purchases {
+     placementIdentifier: string
+   ): Promise<PurchasesOffering | null> {
+     await throwIfNotConfigured();
+-    return RNPurchases.getCurrentOfferingForPlacement(placementIdentifier);
++    const offering = await RNPurchases.getCurrentOfferingForPlacement(placementIdentifier);
++    return offering ?? null;
+   }
+ 
+   /**
