@@ -1,0 +1,5 @@
+{
+  "exit": 1,
+  "stdout": "",
+  "stderr": "GraphQL: manyoneek does not have the correct permissions to execute `AddLabelsToLabelable` (addLabelsToLabelable)\n"
+}

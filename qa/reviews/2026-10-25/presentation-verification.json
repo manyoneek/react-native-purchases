@@ -1,0 +1,28 @@
+{
+  "src": "https://private-user-images.githubusercontent.com/261259129/683971820-080258d6-6359-4781-94a1-5c9a8efb2830.mp4",
+  "duration": 44.433333,
+  "width": 1920,
+  "height": 1080,
+  "playedSeconds": 1.203493,
+  "seekPosition": 34,
+  "readyState": 4,
+  "error": null,
+  "pullRequest": "https://github.com/RevenueCat/react-native-purchases/pull/2069",
+  "screenshots": [
+    {
+      "alt": "Before: undefined breaks the null guard",
+      "complete": true,
+      "width": 1398,
+      "height": 2034,
+      "src": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/before.png"
+    },
+    {
+      "alt": "After: null preserves the same consumer guard",
+      "complete": true,
+      "width": 1398,
+      "height": 2034,
+      "src": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/fixed.png"
+    }
+  ],
+  "verifiedAt": "2026-10-25T09:13:34.022Z"
+}

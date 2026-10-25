@@ -1,6 +1,6 @@
 # RevenueCat SDK review — October 25, 2026
 
-No new confirmed defect. The existing React Native successful-No-Offering bug was reverified on current upstream for migration to RevenueCat, with a separate two-line implementation fix and five permanent Jest checks.
+No new confirmed defect. The existing React Native successful-No-Offering bug was reverified on current upstream and migrated to RevenueCat, with a separate two-line implementation fix and five permanent Jest checks: [issue #2068](https://github.com/RevenueCat/react-native-purchases/issues/2068), [PR #2069](https://github.com/RevenueCat/react-native-purchases/pull/2069).
 
 - Inventory: all 76 public repositories, including forks/archives; 76 local clone origins verified, no missing clones. Six direct manyoneek forks synchronized; existing fix/evidence branches preserved. Reviews used isolated worktrees.
 - React Native `bde1095e84113c07569c0aab6858171768cb9aaf`: reviewed placement/null/error routing and browser/native parity. Original suite: 274 passes. Focused regression: 4 passes / 1 failure before. Fixed suite: 279 passes; build and lint pass. Jest exercises the production wrapper with a mocked native boundary.
@@ -14,3 +14,5 @@ Duplicate search covered open/closed RevenueCat issues and PRs, including indexe
 All twelve known findings' publication states were checked. Existing closed duplicate/resolved reports remain closed. Older app evidence retains its original dates; a status check is not a fresh reproduction. Five other eligible fork pairs remain pending their own latest-source verification and migration. No direct upstream push or merge; schedule unchanged.
 
 The first raw recording included the previously open app before XCTest launched RCBugReporter. Published clips are trimmed to the affected app flow and inspected; assertion-time screenshots come from XCTest attachments. Xcode emitted simulator diagnostic-collection warnings after the expected failing test; assertions, result bundles, screenshots and continuous simctl recordings were preserved.
+
+Publication verified: RevenueCat base, manyoneek contribution head, two-file fix/test diff. Screenshots render and the 44-second explainer plays and seeks inside the PR. Superseded fork issue #7 and PR #8 were closed with replacement links; their branch was preserved. GitHub denied the `pr:fix` label edit for lack of label permissions; issue and PR creation succeeded. The packaged project was independently extracted, prepared, rebuilt and tested: both app checks pass, with the original Podfile.lock unchanged.

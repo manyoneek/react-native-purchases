@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/source.zip",
+    "status": 200,
+    "bytes": 3332746,
+    "sha256": "2e14d9bfc5d82951ac1fb42a4c7e11ebcb9914489f930c61cfa55d58cc54a296"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/before.png",
+    "status": 200,
+    "bytes": 270578,
+    "sha256": "cd116e6d47be3403e7e4fd98e340bb9221a6657d8bd6db207370fc8550962bc2"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/fixed.png",
+    "status": 200,
+    "bytes": 253314,
+    "sha256": "e854ae8d765fbaf5319cdd96af7c68a22822f0e3d2917d1846b30ba59fb9c9d7"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/before.mp4",
+    "status": 200,
+    "bytes": 243288,
+    "sha256": "2d293df2d8aa506a05ac3fa5f92143110510ec792c91614a230a550f86253104"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/fixed.mp4",
+    "status": 200,
+    "bytes": 248618,
+    "sha256": "96013251f47c337bdac402f199c100ba6bba7c6287655370eeb0c6682b3030ef"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/manyoneek/react-native-purchases/b8e195824a75e6186e23661ad08726751d758f61/qa/reproductions/2026-10-25/rn-placement-null/pins.json",
+    "status": 200,
+    "bytes": 273,
+    "sha256": "2277822dd65ff5ebeaf87446bbcddc51a6c22e453469874bae65f944833b913a"
+  }
+]

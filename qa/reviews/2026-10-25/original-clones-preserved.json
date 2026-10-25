@@ -1,0 +1,13 @@
+[
+  "cordova-plugin-purchases",
+  "purchases-flutter",
+  "purchases-kmp",
+  "purchases-js",
+  "purchases-android",
+  "purchases-capacitor",
+  "react-native-purchases",
+  "cli",
+  "purchases-ios",
+  "purchases-unity",
+  "purchases-hybrid-common"
+]
